@@ -1,84 +1,135 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Front-BSG Team Info</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- 引入 Bootstrap -->
-  <link href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/teamCard.css" rel="stylesheet">
-  <script src="http://apps.bdimg.com/libs/jquery/2.0.0/jquery.min.js"></script>
-  <script src="http://apps.bdimg.com/libs/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Front-BSG Team Info</title>
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,300,100,700,900' rel='stylesheet' type='text/css'>
+    <link href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-<div class="container-fluid">
-  <!--team Card-->
+  <div id="header">
+    <header>
+      <h1 class="page-title"><a href="https://github.com/FrontBSG">Front-BSG</a></h1>
+      <!--大家一块编辑Team info,有文采的多多发挥-->
+      <div class="page-description">
+        <div class="container">
+        <p>来自北上广的一群小伙伴组成的前端队伍</p>
+        </div>
+      </div>
+    </header>
+  </div>
 
-  <div class="row" id="teamCard-bar">
-    <div class="color-list">
+  <div class="gallery">
+    <!--zhaolion's info-->
+    <div class="gallery-item">
+      <div class="gallery-item-infos">
+        <figure class="gallery-item-img">
+          <img class="img-circle" src="./img/zhaolion.jpeg">
+        </figure>
+      </div>
 
-      <section class="color" style="background: hsl(4,99%,66%);">
-        <h2 class="name">Front-BSG</h2>
-        <ul class="details">
-          <li><img src="./img/zhaolion.jpeg" class="img-circle" ></li>
-          <li><a href="https://www.github.com/ZhaoLion" class="personInfo"><img src="./img/github.png" class="img-circle"></a></li>
-          <li><a href="https://www.zhihu.com/people/zhao-neng-gan" class="personInfo"><img src="./img/zhihu.jpg" class="img-circle"></a></li>
-          <li><a href="http://www.jianshu.com/users/029f61afdcdd/latest_articles" class="personInfo"><img src="./img/jianshu.jpg" class="img-circle"></a></li>
-          <li><a href="http://zhaolion.com">ZhaoLion</a></li>
-        </ul>
-      </section>
+      <div class="gallery-item-infos">
+        <address>
+          <strong><a href="http://www.zhaolion.com">Zhao liang</a></strong><br>
+          <a href="mailto:#">zhaoliangsyn@163.com</a>
+        </address>
+        <div class="public-site-info">
+          <a href="https://www.github.com/ZhaoLion/" class="public-site-info-link"><img src="img/github.png" class="img-circle"></a>
+          <a href="https://www.zhihu.com/people/zhao-neng-gan/" class="public-site-info-link"><img src="img/jianshu.jpg" class="img-circle"></a>
+          <a href="http://www.jianshu.com/users/029f61afdcdd/latest_articles/" class="public-site-info-link"><img src="img/zhihu.jpg" class="img-circle"></a>
+        </div>
+      </div>
 
-      <section class="color" style="background: hsl(233,21%,56%);">
-        <h2 class="name">Front-BSG</h2>
-        <ul class="details">
-          <li><img src="./img/zhaolion.jpeg" class="img-circle" ></li>
-          <li><a href="https://www.github.com/ZhaoLion" class="personInfo"><img src="./img/github.png" class="img-circle"></a></li>
-          <li><a href="https://www.zhihu.com/people/zhao-neng-gan" class="personInfo"><img src="./img/zhihu.jpg" class="img-circle"></a></li>
-          <li><a href="http://www.jianshu.com/users/029f61afdcdd/latest_articles" class="personInfo"><img src="./img/jianshu.jpg" class="img-circle"></a></li>
-          <li><a href="http://zhaolion.com">ZhaoLion</a></li>
-        </ul>
-      </section>
-
-      <section class="color" style="background: hsl(357,26%,42%);">
-        <h2 class="name">Front-BSG</h2>
-        <ul class="details">
-          <li><img src="./img/zhaolion.jpeg" class="img-circle" ></li>
-          <li><a href="https://www.github.com/ZhaoLion" class="personInfo"><img src="./img/github.png" class="img-circle"></a></li>
-          <li><a href="https://www.zhihu.com/people/zhao-neng-gan" class="personInfo"><img src="./img/zhihu.jpg" class="img-circle"></a></li>
-          <li><a href="http://www.jianshu.com/users/029f61afdcdd/latest_articles" class="personInfo"><img src="./img/jianshu.jpg" class="img-circle"></a></li>
-          <li><a href="http://zhaolion.com">ZhaoLion</a></li>
-        </ul>
-      </section>
-      <section class="color" style="background: hsl(144,33%,68%);">
-        <h2 class="name">Front-BSG</h2>
-        <ul class="details">
-          <li><img src="./img/zhaolion.jpeg" class="img-circle" ></li>
-          <li><a href="https://www.github.com/ZhaoLion" class="personInfo"><img src="./img/github.png" class="img-circle"></a></li>
-          <li><a href="https://www.zhihu.com/people/zhao-neng-gan" class="personInfo"><img src="./img/zhihu.jpg" class="img-circle"></a></li>
-          <li><a href="http://www.jianshu.com/users/029f61afdcdd/latest_articles" class="personInfo"><img src="./img/jianshu.jpg" class="img-circle"></a></li>
-          <li><a href="http://zhaolion.com">ZhaoLion</a></li>
-        </ul>
-      </section>
-
-      <section class="color" style="background: hsl(97,62%,80%);">
-        <h2 class="name">Front-BSG</h2>
-        <ul class="details">
-          <li><img src="./img/zhaolion.jpeg" class="img-circle" ></li>
-          <li><a href="https://www.github.com/ZhaoLion" class="personInfo"><img src="./img/github.png" class="img-circle"></a></li>
-          <li><a href="https://www.zhihu.com/people/zhao-neng-gan" class="personInfo"><img src="./img/zhihu.jpg" class="img-circle"></a></li>
-          <li><a href="http://www.jianshu.com/users/029f61afdcdd/latest_articles" class="personInfo"><img src="./img/jianshu.jpg" class="img-circle"></a></li>
-          <li><a href="http://zhaolion.com">ZhaoLion</a></li>
-        </ul>
-      </section>
     </div>
+
+    <div class="gallery-item">
+      <div class="gallery-item-infos">
+        <figure class="gallery-item-img">
+          <img class="img-circle" src="./img/zhaolion.jpeg">
+        </figure>
+      </div>
+
+      <div class="gallery-item-infos">
+        <address>
+          <strong><a href="http://www.zhaolion.com">Zhao liang</a></strong><br>
+          <a href="mailto:#">zhaoliangsyn@163.com</a>
+        </address>
+        <div class="public-site-info">
+          <a href="https://www.github.com/ZhaoLion/" class="public-site-info-link"><img src="img/github.png" class="img-circle"></a>
+          <a href="https://www.zhihu.com/people/zhao-neng-gan/" class="public-site-info-link"><img src="img/jianshu.jpg" class="img-circle"></a>
+          <a href="http://www.jianshu.com/users/029f61afdcdd/latest_articles/" class="public-site-info-link"><img src="img/zhihu.jpg" class="img-circle"></a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="gallery-item">
+      <div class="gallery-item-infos">
+        <figure class="gallery-item-img">
+          <img class="img-circle" src="./img/zhaolion.jpeg">
+        </figure>
+      </div>
+
+      <div class="gallery-item-infos">
+        <address>
+          <strong><a href="http://www.zhaolion.com">Zhao liang</a></strong><br>
+          <a href="mailto:#">zhaoliangsyn@163.com</a>
+        </address>
+        <div class="public-site-info">
+          <a href="https://www.github.com/ZhaoLion/" class="public-site-info-link"><img src="img/github.png" class="img-circle"></a>
+          <a href="https://www.zhihu.com/people/zhao-neng-gan/" class="public-site-info-link"><img src="img/jianshu.jpg" class="img-circle"></a>
+          <a href="http://www.jianshu.com/users/029f61afdcdd/latest_articles/" class="public-site-info-link"><img src="img/zhihu.jpg" class="img-circle"></a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="gallery-item">
+      <div class="gallery-item-infos">
+        <figure class="gallery-item-img">
+          <img class="img-circle" src="./img/zhaolion.jpeg">
+        </figure>
+      </div>
+
+      <div class="gallery-item-infos">
+        <address>
+          <strong><a href="http://www.zhaolion.com">Zhao liang</a></strong><br>
+          <a href="mailto:#">zhaoliangsyn@163.com</a>
+        </address>
+        <div class="public-site-info">
+          <a href="https://www.github.com/ZhaoLion/" class="public-site-info-link"><img src="img/github.png" class="img-circle"></a>
+          <a href="https://www.zhihu.com/people/zhao-neng-gan/" class="public-site-info-link"><img src="img/jianshu.jpg" class="img-circle"></a>
+          <a href="http://www.jianshu.com/users/029f61afdcdd/latest_articles/" class="public-site-info-link"><img src="img/zhihu.jpg" class="img-circle"></a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="gallery-item">
+      <div class="gallery-item-infos">
+        <figure class="gallery-item-img">
+          <img class="img-circle" src="./img/zhaolion.jpeg">
+        </figure>
+      </div>
+
+      <div class="gallery-item-infos">
+        <address>
+          <strong><a href="http://www.zhaolion.com">Zhao liang</a></strong><br>
+          <a href="mailto:#">zhaoliangsyn@163.com</a>
+        </address>
+        <div class="public-site-info">
+          <a href="https://www.github.com/ZhaoLion/" class="public-site-info-link"><img src="img/github.png" class="img-circle"></a>
+          <a href="https://www.zhihu.com/people/zhao-neng-gan/" class="public-site-info-link"><img src="img/jianshu.jpg" class="img-circle"></a>
+          <a href="http://www.jianshu.com/users/029f61afdcdd/latest_articles/" class="public-site-info-link"><img src="img/zhihu.jpg" class="img-circle"></a>
+        </div>
+      </div>
+
+    </div>
+
   </div>
-  </div>
-</div>
 
-
-
-<!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
-<script src="https://code.jquery.com/jquery.js"></script>
-<!-- 包括所有已编译的插件 -->
-<script src="js/bootstrap.min.js"></script>
 </body>
 </html>
+
+
