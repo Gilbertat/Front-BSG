@@ -4,7 +4,8 @@
 这个仓库是用来存放**Front-BSG小组**的[百度前端技术学院2016春季班](https://github.com/baidu-ife/ife)的所有代码
 
 ## Timeline
-* [task01-团队页面](http://frontbsg.github.io/IFE-Publish/)
+* [task00-团队页面](http://frontbsg.github.io/IFE-Publish/)
+* 零基础HTML编码
 
 ## Task01-团队页面
 团队页面的设计与开发  
