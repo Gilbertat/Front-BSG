@@ -1,0 +1,46 @@
+body {
+    margin: 0 0;
+    background-color: #dedede;
+}
+nav {
+    background-color: #000;
+}
+nav a:link {
+    color: #fff;
+}
+nav a:visited {
+    color: #8e9293;
+}
+.bottom,
+.article-one,
+.article-two,
+.picture,
+.latest {
+    margin: 25px 20px 0 20px;
+    padding: 15px 20px 10px 20px;
+    border-width: 2px;
+    border-color: #959595;
+    border-style: none solid solid none;
+    background-color: #fff;
+}
+.article-one,
+.article-two,
+.latest p {
+    text-indent: 2em;
+}
+.article-one img {
+    display: block;
+}
+
+
+footer {
+    margin: 25px 0 0 0;
+    height: 50px;
+    background-color: #000;
+}
+
+footer p {
+    padding-top: 15px;
+    text-align: center;
+    color: #fff;
+}
