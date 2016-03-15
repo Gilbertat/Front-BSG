@@ -3,7 +3,12 @@ body {
     background-color: #dedede;
 }
 nav {
+    height: 100px;
     background-color: #000;
+}
+nav li {
+    float: right;
+    padding-right: 20px;
 }
 nav a:link {
     color: #fff;
