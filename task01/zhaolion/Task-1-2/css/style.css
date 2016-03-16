@@ -76,20 +76,21 @@ a {
 
 .article-body {
     padding: 5px auto;
-    margin: 5px auto;;
-    background-color: #538ce0;
+    margin: 0 auto;;
+    background-color: #333;
 }
 
 .article-message {
-    padding: 5px auto 20px auto;
-    margin: 20px auto;
-    background-color: #0095BB;
+    padding: 5px auto 5px auto;
+    margin: 0 auto;
+    background-color: #fff;
+    border-bottom: 2px solid #000;
 }
 
 .article-message h2 {
-    line-height: 30px;
-    padding: 5px auto;
-    margin: 5px auto;;
+    line-height: 60px;
+    padding: 10px auto;
+    margin: 10px auto 15px auto;
     text-align: center;
     border-bottom: 2px solid #000;
     font-size: 26px;
@@ -212,15 +213,100 @@ a {
     background-color: #fff;
 	border: 1px solid  #888;
 	color: #3f8d1c;
+    text-align: left;
 }
 .match  tr td {
-	border: 1px solid  #fff;
+	border: 1px solid  #000;
     color: #000;
 }
 
 .match table {
     border: 1px solid  #673334;
-    width: 80%;
+    width: 100%;
     border-spacing: 0;
     margin: 5px auto;
+}
+.slide-bar {
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 5px auto;
+}
+
+.slide-bar-form {
+    width: 80%;
+    margin: 10px auto;
+}
+
+.slide-bar h2 {
+    line-height: 60px;
+    padding: 10px auto;
+    margin: 10px auto 15px auto;
+    text-align: center;
+    border-bottom: 2px solid #000;
+    font-size: 26px;
+    font-weight: 600;
+    font-family: monospace;
+}
+
+.slide-bar p {
+    text-align: left;
+    padding: 5px;
+    font-family: "Microsoft Yahei" ;
+    line-height: 30px;
+    color: #676869;
+    font-size: 15px;
+    font-weight: 400;
+    width: 100%;
+}
+
+.slide-bar-label {
+    float: left;
+    width: 50%;
+}
+
+.slide-bar-label select {
+    display: block;
+    width: 50%;
+
+}
+.slide-bar-label div {
+    display: block;
+    width: 50%;
+}
+
+.slide-bar-text {
+    text-align: left;
+}
+
+.slide-bar-text textarea {
+    width: 70%;
+    height: 100px;
+}
+
+
+.slide-bar-tips {
+    display: inline-block;;
+    font-size: 12px;
+    color: #f00;
+}
+
+.slide-bar-submit {
+    width: 80%;
+    margin: 30px auto;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #1291be;
+}
+
+footer {
+    margin: 25px 0 0 0;
+    height: 50px;
+    background-color: #000;
+}
+
+footer p {
+    padding-top: 15px;
+    text-align: center;
+    color: #fff;
 }
