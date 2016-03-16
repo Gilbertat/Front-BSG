@@ -85,7 +85,9 @@ a {
 .article-picture p {
     text-align: center;
 }
-
+.match {
+    margin-bottom: 20px;
+}
 .match table {
     border-collapse: collapse;
     width: 100%;
