@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    /*text-align: center;*/
+    color: rgb(223, 223, 223);
+    border: 1px solid #999;
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+    padding: 20px;
+    background-color: #eee;
+    /*height: auto;*/
+    zoom: 1;
+}
+.mainBox {
+    float: left;
+    width: 100%;
+    background-color: #eeeeee;
+
+}
+.mainBox .content {
+    margin: 0 140px 0 220px;
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #999;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #000000;
+}
+.subMainBox {
+    float: left;
+    width: 200px;
+    margin-left: -100%;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #999;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    text-align: center;
+    color: #000000;
+}
+.subMainBox img {
+    border: 1px solid #999;
+    float: left;
+}
+.sideBox {
+    float: left;
+    width: 120px;
+    margin-left: -120px;
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #999;
+    /*下面这三条是让padding和border不增加宽度*/
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+}
+
+.sideBox img{
+    margin-bottom: 10px;
+    border: 1px solid #999;
+}
+.sideBox .last{
+    margin-bottom: 0px;
+}
+.container:after {
+    clear: both;
+    display: block;
+    visibility: hidden;
+    height: 0px;
+    line-height: 0px;
+    content: "";
+}
