@@ -8,6 +8,17 @@ body {
     font-family: Arial "Microsoft Yahei" serif;
 }
 
+h2 {
+    display: block;
+    font-size: 1.5em;
+}
+
+h3 {
+    display: block;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
 .content ,
 .content-left-module ,
 .content-right-module ,
@@ -51,8 +62,9 @@ body {
 }
 
 .content-center-module p {
-    line-height: 30px;
-    padding-left: 10px;
+    line-height: 40px;
+    padding: 10px auto 10px 10px;
+    word-spacing: .2em;
 }
 
 
@@ -75,6 +87,18 @@ body {
     display: block;
     width: 80px;
     height: 80px;
-    border:1px solid #999;
+    border: 1px solid #999;
     margin: 20px auto;
+}
+
+footer {
+    margin: 25px 0 0 0;
+    height: 50px;
+    background-color: #000;
+}
+
+footer p {
+    padding-top: 15px;
+    text-align: center;
+    color: #fff;
 }
