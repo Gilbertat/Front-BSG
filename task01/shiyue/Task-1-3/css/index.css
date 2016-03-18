@@ -1,0 +1,64 @@
+/*避免盒模型因为padding，margin导致宽度或高度变大*/
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+
+}
+
+.container {
+    position: relative;
+    margin: 20px;
+    padding: 20px;
+    background-color: #eee;
+}
+
+.left {
+    float: left;
+    width: 200px;
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #999;
+}
+
+.left img {
+    float: left;
+    border: 1px solid #999;
+}
+
+.center {
+    margin: 0 140px 0 220px;
+    padding: 20px;
+    text-indent: 2em;
+    background-color: #fff;
+    border: 1px solid #999;
+
+}
+
+.right {
+    float: right;
+    width: 120px;
+    border: 1px solid #999;
+    background-color: #fff;
+}
+
+.right img {
+    margin: 20px 20px 0 20px;
+    border: 1px solid #999;
+}
+.right .last {
+    margin-bottom: 20px;
+}
+
+/*清除浮动，避免浮动溢出*/
+/*详见:http://www.cnblogs.com/youxin/archive/2012/08/22/2651592.html*/
+.container:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+    zoom: 1;
+}
