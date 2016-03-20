@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial "Microsoft Yahei" serif;
+    background-color: #eee;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Header */
+.header {
+    background-color: #00A2CA;
+    height: 70px;
+    width: 100%;
+    min-width: 800px;
+    list-style-type: none;
+    overflow: hidden;
+}
+
+.head-nav-wrap {
+    float: right;
+    padding: 5px;
+    margin: 5px;
+}
+
+
+.header-nav-logo {
+    color: #fff;
+    float: left;
+    padding: 0 40px;
+    font-size: 40px;
+    font-family: cursive, sans-serif;
+}
+
+.header-nav {
+    display: -webkit-flex; /* Safari */
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    margin: 0 auto;
+    list-style-type: none;
+}
+
+.header-nav a {
+    margin: auto 10px;
+    color: #FFF;
+    font-family: "\5FAE\8F6F\96C5\9ED1";
+    font-size: 16px;
+}
+
+/* body */
+
+.wrap-left-body {
+    display: block;
+    margin: 10px 430px auto 10px;
+    background-color: #eee;
+}
+
+.clearfix: after {
+    content: ".";
+    display: block;
+    clear: both;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.article-message-wrap {
+    display: block;
+    background-color: #fff;
+    margin: 10px auto;
+    box-shadow: 3px 3px #aaa;
+    padding: 10px;
+}
+
+.article-message-content {
+}
+
+.article-message-wrap h2 {
+    line-height: 60px;
+    font-size: 1.5em;
+}
+
+.article-message-wrap h3 {
+    line-height: 40px;
+    font-size: 1.15em;
+    font-weight: 300;
+}
+
+.article-message-wrap p {
+    text-indent: 2em;
+    line-height: 24px;
+}
+
+.article-message-wrap a {
+    color: #00f;
+    text-decoration: underline;
+}
+
+.article-message-content-img {
+    margin: 10px auto;
+    width: 360px;
+    height: 240px;
+}
+
+.article-message-img-list {
+    display: -webkit-flex; /* Safari */
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width: 100%;
+    list-style-type: none;
+
+}
+
+.article-message-img-list img {
+    width: 180px;
+    height: 180px;
+    border: 1px solid #000;
+    margin: 5px;
+}
+
+.article-message-content table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+}
+
+.article-message-content table tr,
+.article-message-content table td,
+.article-message-content table th {
+    border: 1px solid #ccc;
+}
+
+.article-message-content table th {
+    background-color: #000;
+}
+
+.article-message-content ol {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 20px;
+}
+
+.slide-bar {
+    width: 400px;
+    float: right;
+}
+
+.form-item {
+    margin: 3px auto;
+}
+
+.form-item::after {
+    content: "";
+    display: block;
+    clear: both;
+    overflow: hidden;
+    height: 0;
+    visibility: hidden;
+}
+
+.form-lf-item {
+    float: left;
+    width: 180px;
+    margin-right: 5px;
+    margin-top: 2px;
+    text-align: right;
+}
+
+.form-rg-item {
+    float: left;
+    width: 180px;
+    margin-right: 5px;
+    margin-top: 2px;
+    text-align: left;
+}
+
+.form-item input label {
+    float: left;
+}
+
+
+.form-rg-item textarea {
+    width: 180px;
+}
+
+
+
+.form-tips {
+    font-size: .75em;
+    float: left;
+    padding-left: 185px;
+    margin: 5px auto;
+}
+
+.form-item button {
+    width: 100%;
+    padding: 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #0788ff;
+    color: #fff;
+    font-size: 18px;
+    line-height: 36px;        
+}
+
+
+footer {
+    margin: 25px 0 0 0;
+    height: 50px;
+    background-color: #000;
+}
+
+footer p {
+    padding-top: 15px;
+    text-align: center;
+    color: #fff;
+    vertical-align: baseline;
+}
