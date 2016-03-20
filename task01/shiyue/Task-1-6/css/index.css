@@ -67,12 +67,68 @@ header {
     width: 203px;
     border-top: 2px solid #cc8091;
 }
-
+.title {
+    margin-bottom: 0;
+}
 .up-title span {
-    line-height: 30px;
-    text-decoration: underline;
-    font-variant: small-caps;
-    font-size: 24px;
+    font: small-caps 24px/30px 微软雅黑;
     color: #000;
-    font-family: "微软雅黑";
+    text-decoration: underline;
+}
+
+.description {
+    margin-top: 0;
+    font: 12px/10px 楷体;
+    color: #676767;
+}
+
+.up-instruction p {
+    margin: 30px 0 0 0;
+    font: italic 116px 微软雅黑;
+    color: #75b86b;
+}
+
+.bottom-title,
+.bottom-subtitle,
+.bottom-side {
+    margin-top: 0;
+    color: #cc8091;
+}
+.bottom-title {
+    float: left;
+    margin-bottom: 0;
+    font: 55px 微软雅黑;
+}
+.inner-bottom {
+    float: right;
+    margin-right: 30px;
+}
+
+.bottom-subtitle {
+    font: 21px 微软雅黑;
+    margin-top: 13px;
+    margin-bottom: 0;
+}
+.bottom-side {
+    font: 12px 微软雅黑;
+}
+
+
+
+.up-bottom::after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+    zoom: 1;
+}
+
+.up-content:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+    zoom: 1;
 }
