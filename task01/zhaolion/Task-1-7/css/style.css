@@ -1,0 +1,86 @@
+html, body {
+  min-width: 1280px;
+}
+
+/* - width - */
+
+.width-1280 {
+  width: 1280px;
+}
+
+/* - Header - */
+
+header {
+  width: 100%;
+  height: 55px;
+}
+.logo {
+  font-size: 21px;
+  margin-left: 57px;
+  float: left;
+  text-decoration: none;
+  color: #000;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+.logo::before {
+  height: 31px;
+  width: 31px;
+  content: url(../img/header-logo.png);
+  vertical-align: middle;
+  display: inline-block;
+  margin-right: 5px;
+}
+.navi {
+  height: 55px;
+  list-style: none;
+  margin: 0 40px 0 0;
+  padding: 0;
+  float: right;
+}
+
+.navi ul li a{
+	height:52px;
+	line-height: inherit;
+	width:65px;
+	text-align: center;
+	text-decoration: none;
+	display: block;
+	color:#878787;
+	font-size: 14px;
+}
+
+.navi ul {
+  list-style: none;
+  margin:0 40px 0 0;
+  padding:0;
+  float:right;
+}
+
+.navi ul li {
+  float: left;
+  height: 55px;
+  line-height: 55px;
+  margin-right: 20px;
+}
+
+a.sign-in{
+	height:55px;
+  /*login-img left ,login-word center*/
+	background: url(../img/signin.png) no-repeat center left;
+	color: #e74f4d;
+}
+
+.navi ul li.sign-in {
+    margin-right: 0;
+}
+
+.navi ul li a.sign-in:hover{
+	border-bottom: none;
+}
+
+.navi ul li a:hover,
+.active {
+	border-bottom: 3px solid #e74f4d;
+	color: #e74f4d;
+}
