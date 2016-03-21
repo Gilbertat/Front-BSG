@@ -15,8 +15,9 @@ header {
   height: 55px;
 }
 .logo {
+  display: block;
   font-size: 21px;
-  margin-left: 57px;
+  margin-left: 60px;
   float: left;
   text-decoration: none;
   color: #000;
@@ -34,7 +35,6 @@ header {
 .navi {
   height: 55px;
   list-style: none;
-  margin: 0 40px 0 0;
   padding: 0;
   float: right;
 }
@@ -83,4 +83,50 @@ a.sign-in{
 .active {
 	border-bottom: 3px solid #e74f4d;
 	color: #e74f4d;
+}
+
+/*banner*/
+.banner {
+  height:690px;
+	min-width:1280px;
+	background: #ccc url(../img/header-back.jpg) center;
+	background-size:cover;
+  clear: both;
+}
+
+.banner-mock {
+  background: rgba(0,0,0,.3);
+  height:inherit;
+  width:inherit;
+}
+
+.banner-mock h1 {
+  color: #fff;
+	font-size: 60px;
+	margin:0;
+	padding: 200px 0 20px 120px;
+}
+
+.banner-mock p {
+  color: #fff;
+	font-size: 22px;
+	font-weight:normal;
+	line-height: 35px;
+	margin:0 0 30px 120px;
+}
+
+.banner-mock a {
+  display: block;
+	height:63px;
+	line-height: 63px;
+	width:330px;
+	background: #e74f4d;
+	text-align: center;
+	color: #fff;
+	font-size: 30px;
+	font-weight: normal;
+	letter-spacing: 0.3em;
+	text-indent: 10px;
+	text-decoration: none;
+	margin:10px 0 0 120px;  
 }
