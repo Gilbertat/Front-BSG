@@ -1,0 +1,43 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+.whole,
+.leftside,
+.rightside,
+.center{
+    padding:20px;
+}
+
+.whole{
+    background:#eee;
+    border: 1px solid #000;
+}
+
+.whole after{
+    display: block;
+}
+
+.center{
+    margin: 0 140px 0 220px;
+    background: #fff;
+
+}
+
+.leftside{
+    float: left;
+    width: 200px;
+    border: 1px solid #000;
+    background: #fff;
+}
+
+.rightside{
+    float: right;
+    width: 120px;
+    border: 1px solid #000;
+    background: #fff;
+}
+
+
+
