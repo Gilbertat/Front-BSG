@@ -1,0 +1,155 @@
+/*
+    1.位置属性(position, top, right, z-index, display, float等)
+    2.大小(width, height, padding, margin)
+    3.文字系列(font, line-height, letter-spacing, color- text-align等)
+    4.背景(background, border等)
+    5.其他(animation, transition等)
+*/
+body {
+    margin: 0;
+    background-color: #dedede;
+    overflow: visible;
+}
+.header {
+    height: 60px;
+    width: 100%;
+    margin-bottom: 10px;
+    min-width: 600px;
+    background-color: #880d36;
+}
+.header-nav {
+    display: block;
+    margin: 0 auto;
+    background: #2175bc;
+    list-style-type: none;
+    overflow: visible;
+}
+.header-nav li {
+    display: inline;
+    padding: 20px 0 0 0;
+}
+.header-nav li a {
+    float: right;
+    margin: 7px 10px;
+    padding: 15px 20px;
+    font-family: "\5FAE\8F6F\96C5\9ED1";
+    font-size: 16px;
+    color: #fff;
+}
+.header-nav li a:hover {
+    background: #39f;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header-nav li img {
+    margin: 1 30px;
+}
+
+.bottom,
+.article-one,
+.article-two,
+.article-picture,
+.article-latest {
+    margin: 25px 20px 0 20px;
+    padding: 5px 20px;
+    border-width: 2px;
+    border-color: #959595;
+    background-color: #fff;
+    border-style: none solid solid none;
+}
+.article-one,
+.article-two,
+.article-latest p {
+    text-indent: 2em;
+    line-height: 2;
+}
+.article-one  img {
+    display: block;
+    margin-left: 30px;
+}
+.article-two img {
+    display: block;
+    margin-left: 20px;
+}
+.article-picture li {
+    width: 420px;
+    margin-top: 20px;
+    padding: 10px 10px;
+    list-style-type: none;
+    border: 1px solid;
+    border-color: #959595;
+}
+.article-picture p {
+    text-align: center;
+}
+.match {
+    margin-bottom: 20px;
+}
+.match table {
+    border-collapse: collapse;
+    width: 100%;
+}
+.match th {
+    padding: 3px;
+    text-align: left;
+    background-color: #333;
+    color: #fff;
+}
+.match td {
+    padding: 3px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #cbcbcb;
+}
+.match tfoot {
+    background-color: #cbcbcb;
+}
+.bottom {
+    line-height: 2;
+}
+.bottom  h2 {
+    padding-left: 3px;
+    border-left: 3px solid #cbcbcb;
+    font-size: 16px;
+}
+.bottom p {
+    font-size: 14px;
+}
+.tip {
+    margin-left: 30%;
+    font-size: 12px;
+    color: #636363;
+}
+.user-input {
+    float: left;
+    width: 30%;
+    text-align: right;
+}
+.bottom textarea {
+    width: 220px;
+    height: 80px;
+}
+.submit {
+    margin-top: 20px;
+    padding: 15px;
+    width: 100%;
+    color: #fff;
+    background-color: #3355d0;
+    border-radius: 5px;
+    border: none;
+}
+
+footer {
+    margin: 25px 0 0 0;
+    height: 50px;
+    background-color: #000;
+}
+
+footer p {
+    padding-top: 15px;
+    text-align: center;
+    color: #fff;
+}
