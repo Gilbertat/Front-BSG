@@ -1,0 +1,41 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial "Microsoft Yahei" serif;
+}
+
+.content {
+    width: 400px;
+    height: 200px;
+    background-color: #ccc;
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -200px;
+    margin-top: -100px;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    background-color: #fc0;
+    border-radius: 50%;
+}
+
+.top-left-position {
+    position: relative;
+    left: -50px;
+    top: -50px;
+}
+
+.bottom-right-postion {
+    position: relative;
+    right: -350px;
+    top: 50px;
+}
