@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>IFE Task-02-02</title>
+    <style>
+        body {
+            text-align: left;
+        }
+        ul {
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+</ul>
+<h3>污染城市列表</h3>
+<ul id="aqi-list">
+</ul>
+
+<script type="text/javascript">
+
+    var aqiData = [
+        ["北京", 90],
+        ["上海", 50],
+        ["福州", 10],
+        ["广州", 50],
+        ["成都", 90],
+        ["西安", 100]
+    ];
+    var rankingList = ['第一名','第二名','第三名','第四名','第五名','第六名'];
+    var oSortDataList = document.getElementById('aqi-list');
+    var sortData = null;
+    //1.对原始数据进行筛选，返回大于60的。
+    aqiData = aqiData.filter(function(item, index, array){
+        return (item[1] > 60) ;
+    });
+    //2.对数组进行降序排序。
+    aqiData.sort(function(x,y){
+        if(y[1] >= x[1]){
+            return 1;
+        }else{
+            return -1;
+        }
+    });
+    //3.将数据插入html中。
+    for(var i = 0; i < aqiData.length ;i++){
+        if(sortData == null){
+            sortData = '<li>' + rankingList[i] + aqiData[i][0] + ':' + aqiData[i][1] + '</>';
+        }else{
+           sortData += '<li>' + rankingList[i] + aqiData[i][0] + ':' + aqiData[i][1] + '</>';
+        }
+    }
+    oSortDataList.innerHTML = sortData ;
+
+</script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.whole,
+.leftside,
+.center{
+    padding:20px;
+}
+
+.whole{
+    min-width:800px;
+    background:#eee;
+    border: 1px solid #000;
+}
+
+.whole:after{
+    content: "";
+    width: 0;
+    height: 0;
+    display: block;
+    clear: both;
+}
+
+.leftside{
+    float: left;
+    width: 200px;
+    border: 1px solid #000;
+    background: #fff;
+}
+
+.rightside{
+    float: right;
+    width: 120px;
+    border: 1px solid #000;
+    background: #fff;
+}
+
+.center{
+    margin: 0 140px 0 220px;
+    background: #fff;
+
+}
+
+.left-team-logo {
+    width: 80px;
+    height: 80px;
+    float: left;
+}
+
+.team-name {
+    display: inline-block;
+    font-size: 14px; //设置元素的字体大小
+    float: left;
+    padding-left: 10px;
+}
+
+.personal-logo{
+    display: block;
+    width: 80px;
+    height: 80px;
+    margin: 20px auto;
+    border: 1px solid #000;
+}
+
+
