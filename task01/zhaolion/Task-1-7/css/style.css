@@ -179,3 +179,136 @@ a.sign-in{
   margin-top: 51px;
   color: #90908f;
 }
+
+/* -find-info- */
+.find-info {
+  height: 340px;
+  width: inherit;
+  text-align: center;
+  background: url(../img/see_map.png) no-repeat center;
+  /*#fix background img only wrap in a 1280*340 size*/
+  background-size: cover;
+  color: #fff;
+}
+
+.find-info h3 {
+  font-size: 22px;
+  padding: 50px 0 15px 0;
+  /*fixed margin-top 1em ,keep margin-top :0 */
+  -webkit-margin-before:0;
+  /*fixed margin-bottom 1em ,keep margin-bottom :0 */
+  -webkit-margin-after:0;
+}
+
+.find-info h3::after {
+  content: '';
+  display: inline-block;
+  height: 2px;
+  width: 30px;
+  background: #fff;
+}
+.find-info p {
+  font-size: 12px;
+  margin: 0 0 60px 0;
+}
+
+/* -find-info -navi-select-list-*/
+/* -下拉菜单- */
+.select-list {
+  display: inline-block;
+  vertical-align: middle;
+  width: 236px;
+  height: 38px;
+  margin: 0 30px;
+}
+
+.select-list a {
+  text-decoration: none;
+}
+
+/* 一级菜单 */
+.select-list span {
+  display: block;
+  width: 236px;
+	height:38px;
+	line-height: 38px;
+	font-size: 12px;
+	color:#a8aaaa;
+	position: absolute;
+	left:12px;
+  text-align: left;
+}
+
+.navi-select-1 img {
+  width: 19px;
+  height: 18px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.search {
+  border:0;
+	padding:0;
+	background: #be4e48;
+	font-size: 14px;
+	color: #fff;
+	letter-spacing:1em;
+	outline: none;
+}
+
+.navi-select-1 {
+  width: inherit;
+  height: inherit;
+  position: relative;
+  cursor: pointer;
+  background: #fff;
+  list-style-type: none;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  /* fix margin-left 40px bug*/
+  -webkit-padding-start:0;
+}
+
+/* -二级菜单－*/
+.navi-select-2 {
+  display: none;
+  width: 236px;
+  height: 38px;
+  position:relative;;
+  margin:0;
+	padding:0;
+  background:#c1cd94;
+  list-style-type: none;
+  z-index: 50;
+}
+
+.navi-select-1 li:hover .navi-select-2 {
+  display: block;
+  position: absolute;
+  top: 100%;
+}
+
+.navi-select-2 li {
+  width:236px;
+  height:25px;
+	background:#e3e3e4;
+	line-height: 25px;
+	color:#767777;
+	font-size: 12px;
+	text-align: left;
+	text-indent: 30px;
+	cursor:pointer;
+}
+
+.navi-select-2 li:hover {
+  background: #be4e48 url(../img/selected.png) no-repeat 10px 0;
+	color: #fff;
+}
+
+navi-select-2 a {
+  display: block;
+  padding: 25px 40px;
+  color: #757575;
+  text-decoration: none;
+}
