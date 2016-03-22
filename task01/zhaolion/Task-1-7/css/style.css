@@ -162,3 +162,20 @@ a.sign-in{
 .info-list:last-child p {
     border-right: none;
 }
+
+/* -new world title- */
+.newworld-title {
+  height: 360px;
+  width: inherit;
+  background-color: rgba(237,236,236,.3);
+  text-align: center;
+}
+
+.newworld-title img {
+  margin-top: 90px;
+}
+.newworld-title p {
+  font-size: 54px;
+  margin-top: 51px;
+  color: #90908f;
+}
