@@ -515,7 +515,8 @@ navi-select-2 a {
 }
 .joinus-form {
   width: 100%;
-  min-width: 1080px;
+  min-width: 1180px;
+  overflow-x:auto;
 }
 
 .joinus-form div.rule {
