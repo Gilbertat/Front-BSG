@@ -113,18 +113,43 @@ header {
     font: 12px 微软雅黑;
 }
 
-
-
-.up-bottom::after {
-    content: ".";
-    display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden;
-    zoom: 1;
+.center-content-what,
+.center-content-when,
+.center-content-how {
+    margin-top: 30px;
+}
+.center-content-when {
+    margin-left: 30px;
+    margin-right: 30px;
 }
 
-.up-content:after {
+.center-left-title,
+.center-center-title,
+.center-right-title {
+    margin-bottom: 0;
+    text-decoration: underline;
+    font:  16px 微软雅黑;
+}
+
+.center-left-content,
+.center-center-content,
+.center-right-content {
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+
+.center-content-what,
+.center-content-when,
+.center-content-how {
+    float: left;
+}
+
+
+.center-content:after,
+.up-bottom::after,
+.up-content:after
+ {
     content: ".";
     display: block;
     height: 0;
