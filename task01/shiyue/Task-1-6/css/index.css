@@ -8,7 +8,7 @@ body {
 .container {
     width: 980px;
     height: 1386px;
-    padding: 0 43px 0 45px;
+    margin: 0 auto;
 }
 
 header {
@@ -41,9 +41,9 @@ header {
     font-size: 12px;
     color: #d45d5c;
 }
-.up-content-left,
-.up-content-right {
-    margin-top: 40px;
+.up-content {
+    width: 892px;
+    margin: 20px 0 20px 0; 
 }
 
 .up-content-left {
@@ -51,10 +51,6 @@ header {
     position: relative;
     width: 641px;
     height: 301px;
-}
-
-.up-content-right {
-    margin-left: 30px;
 }
 
 .green-left,
@@ -76,8 +72,11 @@ header {
     width: 203px;
     border-top: 2px solid #cc8091;
 }
+.up-instruction {
+    height: 100px;
+}
 .up-bottom {
-
+    margin-top: 35px;
 }
 .title {
     margin-bottom: 0;
@@ -96,7 +95,8 @@ header {
 
 .up-instruction p {
     margin: 0;
-    font: italic 116px 微软雅黑;
+    font: italic 116px Microsoft Yahei;
+    font-weight: 700;
     color: #75b86b;
 }
 
@@ -109,7 +109,7 @@ header {
 .bottom-title {
     float: left;
     margin-bottom: 0;
-    font: 55px 微软雅黑;
+    font: 55px Microsoft Yahei;
 }
 .inner-bottom {
     float: left;
@@ -117,19 +117,14 @@ header {
 }
 
 .bottom-subtitle {
-    font: 21px 微软雅黑;
-    margin-top: 13px;
+    font: 21px Microsoft Yahei;
+    margin-top: 15px;
     margin-bottom: 0;
 }
 .bottom-side {
-    font: 12px 微软雅黑;
+    font: 12px Microsoft Yahei;
 }
 
-.center-content-what,
-.center-content-when,
-.center-content-how {
-    margin-top: 30px;
-}
 .center-content-when {
     margin-left: 30px;
     margin-right: 30px;
@@ -140,7 +135,7 @@ header {
 .center-right-title {
     margin-bottom: 0;
     text-decoration: underline;
-    font:  16px 微软雅黑;
+    font:  16px Microsoft Yahei;
 }
 
 .center-left-content,
