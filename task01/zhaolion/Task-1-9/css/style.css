@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Microsoft YaHei, arial,sans-serif;
+}
+
+
+/* float-type */
+.float-r {
+  float: right;
+}
+
+.float-l {
+  float: left;
+}
+
+/* color */
+.c-white {
+  color: #fff;
+}
+
+/* header */
+header {
+  width: 100%;
+  min-width: 768px;
+  height: 56px;
+  margin: 0;
+  position: relative;
+  background: #2289bf;
+  overflow: hidden;
+}
+
+.logo {
+  width: 36px;
+  height: 36px;
+  position: absolute;
+  top: 10px;
+  left: 50px;
+}
+
+.search-box {
+  position: absolute;
+  top: 13px;
+  right: 56px;
+  height: 30px;
+}
+
+.login {
+  position: relative;
+  vertical-align: bottom;
+  margin-left: 10px;
+}
+
+.login img {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  margin-left: 10px;
+  margin-top: 7px;
+}
+
+.login a {
+  text-decoration: none;
+  line-height: 16px;
+  font-size: 16px;
+  margin-top: 7px;
+}
+
+.search {
+  position: relative;
+}
+
+.search img {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 6px;
+  left: 10px;
+}
+
+.search input {
+  border: none;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 50px;
+  padding: 0 10px 0 40px;
+  width: 170px;
+  background: #fff;
+}
