@@ -9,7 +9,6 @@ body {
     margin: 0 auto;
     width: 980px;
     height: 1386px;
-    border-bottom: 1px solid #938e8c;
 }
 
 header {
@@ -167,7 +166,7 @@ header {
 .center-content-left p,
 .center-content-center p,
 .center-content-right p {
-    font-size: 12px 宋体;
+    font-size: 12px ;
     line-height:20px;
     color: #767777;
     opacity: .70;
@@ -246,6 +245,131 @@ header {
     margin: 10px 0 5px 5px;
 }
 
+.bottom-content-right {
+    float: right;
+    width: 458px;
+}
+.bottom-right-top {
+    height: 275px;
+}
+
+.right-minor {
+    position: relative;
+    top: -60px;
+}
+
+.inner-right {
+    position: relative;
+    height: 44px;
+    top: -140px;
+    left: 60px;
+    border-left: 3px solid #72b16f;
+}
+.inner-right p {
+    position: relative;
+    left: 10px;
+    top: 10px;
+    letter-spacing: 160;
+    font: 26px 微软雅黑;
+    color: #fff;
+}
+
+.inner-right span {
+    font: italic 12px 微软雅黑;
+    color: #72b16a;
+}
+
+.bottom-right-bottom {
+    margin-top: 10px;
+    position: relative;
+    height: 318px;
+    background-color: #eeeed6;
+}
+
+.bottom-right-bottom ul {
+    list-style-image: url(../img/sanjiao.png);
+}
+
+.bottom-right-bottom li {
+    margin-left: 20px;
+    padding-top: 20px;
+    font: 16px 宋体;
+    color: #565b5a;
+}
+
+.bottom-right-bottom span {
+    font: oblique 12px;
+
+}
+
+.bottom-left {
+    position: absolute;
+    float: left;
+    width: 260px;
+    height: 160px;
+    bottom: 0;
+    left: 0;
+    background-color: #d55d5c;
+    padding: 20px 10px;
+    color: #fff;
+    font-family: 黑体;
+}
+
+.zero {
+    float: left;
+    text-align: left;
+    font: 110px 微软雅黑;
+    margin: 37px 10px;
+    height: 86px;
+    line-height: 86px;
+    border-right: 2px solid #fff;
+}
+.one {
+    margin-top: 37px;
+    margin-bottom: 0;
+    font-style: italic;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.hello {
+    margin-top: 0;
+    font-size: 12px;
+    line-height: 10px;
+}
+
+.bottom-right {
+    position: relative;
+    float: right;
+    margin-left: 20px;
+    top: 20px;
+    right: 0;
+    bottom: 0;
+    width: 178px;
+    height: 160px;
+    padding: 0 10px;
+}
+.bottom-right span {
+    font: 72px 黑体;
+    color: #d45d5c;
+    padding: 0;
+}
+.bottom-right p {
+    font: italic 14px 黑体;
+    color: #5a5b5b;
+    line-height: 16px;
+    text-indent: 2em;
+}
+.up-left {
+    position: absolute;
+    bottom: 100px;
+    right: 150px;
+}
+.down-right {
+    position: absolute;
+    bottom: -10px;
+    right: 5px;
+}
 
 .center-content:after,
 .up-bottom::after,
@@ -258,4 +382,17 @@ header {
     clear: both;
     visibility: hidden;
     zoom: 1;
+}
+
+footer {
+    margin: 0;
+    width: 892px;
+    color: #d45d5c;
+    font-family: "黑体";
+    text-align: right;
+    border-top: 2px solid #938e8c;
+}
+
+footer p {
+    margin-top: 0;
 }
