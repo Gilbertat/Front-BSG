@@ -6,9 +6,10 @@ body {
 }
 
 .container {
+    margin: 0 auto;
     width: 980px;
     height: 1386px;
-    margin: 0 auto;
+    border-bottom: 1px solid #938e8c;
 }
 
 header {
@@ -128,7 +129,7 @@ header {
 .center-content {
     display: -webkit-flex; /* Safari */
     display: flex;
-    margin: 0 0 20px 0;
+    margin: 0;
     width: 892px;
     flex-flow: row nowrap;
 }
@@ -166,10 +167,9 @@ header {
 .center-content-left p,
 .center-content-center p,
 .center-content-right p {
-    font-size: 12px;
+    font-size: 12px 宋体;
     line-height:20px;
     color: #767777;
-    font-family: 宋体;
     opacity: .70;
 }
 
@@ -185,11 +185,73 @@ header {
     opacity: .70;
 }
 
+.topspan {
+    font: italic 72px 黑体;
+    font-weight: 900;
+    color: #f5e327;
+}
+
+.bottomspan {
+    font: 33px 黑体;
+    font-weight: 700;
+    color: #11456b;
+}
+.bottom-content {
+    width: 892px;
+    margin: 0;
+}
+
+.bottom-content-left {
+    float: left;
+    width: 415px;
+}
+
+.bottom-left-top {
+    border-bottom: 2px solid #11456b;
+}
+
+.bottom-left-top p {
+    margin-bottom: 10px;
+    font: 42px 黑体;
+    color: #11456b;
+    font-weight: 900;
+    line-height:50px;
+}
+
+.bottom-left-bottom {
+    margin-bottom: 20px;
+}
+
+.bottom-left-bottom p {
+    margin: 0;
+    text-indent: 2em;
+    font: 12px 宋体;
+    line-height: 16px;
+    opacity: .70;
+}
+
+.first-paragraph p {
+    margin-top: 20px;
+    text-indent: 0;
+}
+
+.first-paragraph p:first-letter {
+    float: left;
+    font: 70px 微软雅黑;
+    color: #f5e237;
+}
+
+.first-paragraph img {
+    float: right;
+    margin: 10px 0 5px 5px;
+}
+
+
 .center-content:after,
 .up-bottom::after,
 .up-content:after,
-.up-content-right:after
- {
+.up-content-right:after,
+.bottom-content:after {
     content: ".";
     display: block;
     height: 0;
