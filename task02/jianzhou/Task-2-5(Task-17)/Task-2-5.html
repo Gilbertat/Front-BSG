@@ -1,0 +1,48 @@
+<!DOCTYPE>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>IFE JavaScript Task 01</title>
+    <style>
+        .aqi-chart-wrap {
+            width: 100%;
+            height: 500px;
+            border: 1px solid #000000;
+            margin-top: 5px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            align-items: flex-end;
+        }
+        div div{
+            width:10px;
+            /*height: 5px;*/
+            /*border: 1px solid #ff0000;*/
+            margin-right: 2px;
+            display: inline-block;
+        }
+    </style>
+
+</head>
+<body>
+<fieldset id="form-gra-time">
+    <legend>请选择日期粒度：</legend>
+    <label>日<input name="gra-time" value="day" type="radio" checked="checked"></label>
+    <label>周<input name="gra-time" value="week" type="radio"></label>
+    <label>月<input name="gra-time" value="month" type="radio"></label>
+</fieldset>
+
+<fieldset>
+    <legend>请选择查看的城市：</legend>
+
+    <select id="city-select">
+
+    </select>
+</fieldset>
+<div class="aqi-chart-wrap">
+    <!--<div style="height: 100px;background-color: #000000;" title="你是傻逼啊">o</div>-->
+</div>
+<script src="Task17.js"></script>
+</body>
+</html>

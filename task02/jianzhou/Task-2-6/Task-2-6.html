@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Task-2-6</title>
+    <style>
+
+        div div {
+            display: inline-block;
+        }
+
+        #boxS {
+            margin-top: 50px;
+            width: 100%;
+            height: 50px;
+            border: 1px solid #000000;
+        }
+        #boxS div {
+            width:50px;
+            height: 50px;
+            color: #ffffff;
+            font-size: 20px;
+            text-align: center;
+            line-height: 50px;
+            background-color: #ff0000;
+            margin-right: 5px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div >
+        <input type="text" placeholder="请输入数字" >
+        <div id="btnS">
+            <button id="btn1">左侧入</button>
+            <button id="btn2">右侧入</button>
+            <button id="btn3">左侧出</button>
+            <button id="btn4">右侧出</button>
+        </div>
+    </div>
+    <div id="boxS">
+
+    </div>
+<script>
+    var arr = new Array();
+    var oText = document.getElementsByTagName('input');
+    var oBoxs = document.getElementById('boxS');
+
+    var EventUtil = {
+        addHandler: function(element, type, handler){
+              if(element.addEventListener){
+                  //DOM2级方法
+                  //下列三个参数，1.要处理的事件名 2.作为事件处理程序的函数 3.一个布尔值
+                  element.addEventListener(type, handler, false);
+              }else if(element.attachEvent){
+                  //IE方法
+                  element.attachEvent("on" + type, handler);
+              }else {
+                  //DOM0级方法
+                  element["on" + type] = handler;
+              }
+        },
+        removeHandler: function(element, type, handler){
+            if(element.removeEventListener){
+                element.removeEventListener(type, handler, false);
+            }else if(element.detachEvent){
+                element.detachEvent("on" + type, handler);
+            }else {
+                element["on" + type] = null;
+            }
+        },
+        //JS高程抄的，什么意思呀！
+        getEvent: function(event){
+            return event ? event : window.event;
+        },
+        //
+        getTarget: function(event){
+            return event.target || event.srcElement;
+        },
+
+        preventDefault: function(event){
+            if(event.preventDefault){
+                event.preventDefault();
+            }  else{
+                event.returnValue = false;
+            }
+        },
+        stopPropagation: function(event){
+            if(event.stopPropagation){
+                event.stopPropagation();
+            } else{
+                event.cancelBubble = true;
+            }
+        }
+
+    }
+    //
+    function addLeft(){
+        if(!isNaN(oText[0].value)){
+            arr.unshift(oText[0].value);
+        }else{
+            alert("请输入合法的数字");
+        }
+
+    }
+
+    function addRight(){
+        if(!isNaN(oText[0].value)){
+            arr.push(oText[0].value);
+        }else{
+            alert("请输入合法的数字");
+        }
+
+    }
+
+
+    //当数据发生变化，重绘队列！
+    function redraw(){
+        oBoxs.innerHTML = "";
+        for(var i=0; i<arr.length; i++){
+            oBoxs.innerHTML += '<div>' + arr[i] + '</div>';
+        }
+    }
+
+    function init(){
+        var oDiv = document.getElementById('btnS');
+        EventUtil.addHandler(oDiv, "click", function(event){
+            event = EventUtil.getEvent(event);
+            var target = EventUtil.getTarget(event);
+            switch(target.id){
+                case "btn1":
+                    addLeft();
+                    break;
+                case "btn2":
+                    addRight();
+                    break;
+                case "btn3":
+                    arr.shift();
+                    break;
+                case "btn4":
+                    arr.pop();
+                    break;
+            }
+            redraw();
+        });
+    }
+    init();
+</script>
+</body>
+</html>
