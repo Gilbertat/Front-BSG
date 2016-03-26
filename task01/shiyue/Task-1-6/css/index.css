@@ -197,7 +197,7 @@ header {
 }
 .bottom-content {
     width: 892px;
-    margin: 0;
+    margin:20px 0 40px 0;
 }
 
 .bottom-content-left {
@@ -210,6 +210,7 @@ header {
 }
 
 .bottom-left-top p {
+    margin-top: 0;
     margin-bottom: 10px;
     font: 42px 黑体;
     color: #11456b;
@@ -371,19 +372,6 @@ header {
     right: 5px;
 }
 
-.center-content:after,
-.up-bottom::after,
-.up-content:after,
-.up-content-right:after,
-.bottom-content:after {
-    content: ".";
-    display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden;
-    zoom: 1;
-}
-
 footer {
     margin: 0;
     width: 892px;
@@ -395,4 +383,17 @@ footer {
 
 footer p {
     margin-top: 0;
+}
+
+.center-content:after,
+.up-bottom::after,
+.up-content:after,
+.up-content-right:after,
+.bottom-content:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+    zoom: 1;
 }
