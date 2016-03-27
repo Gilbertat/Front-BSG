@@ -23,27 +23,28 @@
     <!--slide bar-->
     <div class="slide-bar">
         <h2>侧边栏的标题,侧边栏的窗口标题</h2>
+        <br>
         <form name="user_info">
-            <p>
-                <label class="user-input" for="email_addr">请输入你的邮箱地址:&nbsp;</label>
+            <p class="remind-format">
+                <label class="user-input" for="email_addr">请输入你的邮箱地址：&nbsp;</label>
                 <input id="email-addr"type="email" placeholder="请输入邮箱地址">
             </p>
             <p class="tip">邮箱地址请按要求格式输入</p>
-            <p>
+            <p class="remind-format">
                 <label class="user-input" for="password_user">请输入密码：&nbsp;</label>
                 <input id="password-user"type="password" placeholder="密码不能太简单" pattern="[0-9A-Za-z]{6,16}">
             </p>
-            <p>
+            <p class="remind-format">
                 <label class="user-input" for="password_user2">请重复输入密码：&nbsp;</label>
                 <input id="password-user2"type="password" placeholder="密码要和上面保持一致" pattern="[0-9A-Za-z]{6,16}">
             </p>
             <p class="tip">密码为6－16位英文数字</p>
-            <p>
+            <p class="remind-format">
                 <span class="user-input">性别：&nbsp;</span>
                 <input type="radio" name="gender" value="male" checked id="male"><label for="male">男</label>
                 <input type="radio" name="gender" value="female" id="female"> <label for="female">女</label>
             </p>
-            <p>
+            <p class="remind-format">
                 <span class="user-input">城市：&nbsp;</span>
                 <select>
                     <option value="beijing">北京</option>
@@ -52,13 +53,13 @@
                     <option value="shenzhen">深圳</option>
                 </select>
             </p>
-            <p>
+            <p class="remind-format">
                 <span class="user-input">爱好：&nbsp;</span>
                 <input name="aihao"type="checkbox" id="yundong"><label for="yundong">运动</label>
                 <input name="aihao"type="checkbox" id="yishu"><label for="yishu">艺术</label>
                 <input name="aihao"type="checkbox" id="kexue"><label for="kexue">科学</label>
             </p>
-            <p>
+            <p class="remind-format">
                 <span class="user-input">个人描述：&nbsp;</span>
                 <textarea>这是一个多行输入框，输入您的个人描述 </textarea>
                 <br>
@@ -246,7 +247,7 @@
         </div>
     </div>
 
-    <footer>
+    <footer clss="float: down">
         <p>版权所有&copy;</p>
     </footer>
 </body>

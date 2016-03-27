@@ -58,15 +58,12 @@ a {
     width: 400px;
     float: right;
     background-color: #FFF;
-    margin:10px 10px auto 10px;
+    margin:25px 10px auto 10px;
     overflow: hidden;
 }
 
 .left-warp{
-    position: relative;
-    float: left;
     margin: 10px 430px auto 10px;
-    min-width: 440px;
     overflow: hidden;
 }
 
@@ -91,7 +88,6 @@ a {
     line-height: 2;
 }
 .article-one  img {
-    display: block;
     margin-left: 30px;
     overflow: hidden;
 }
@@ -144,13 +140,19 @@ a {
     font-size: 14px;
 }
 .tip {
-    margin-left: 30%;
+    /*margin-left: 180px;*/
     font-size: 12px;
+    margin:5px auto 5px 180px;
     color: #636363;
 }
+
+.remind-format{
+    margin-bottom: 5px;
+}
+
 .user-input {
+    width: 180px;
     float: left;
-    width: 30%;
     text-align: right;
 }
 .bottom textarea {
