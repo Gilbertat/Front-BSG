@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Task-2-8(Task20)</title>
+    <style>
+
+        div div {
+            display: inline-block;
+        }
+
+        #boxS {
+            margin-top: 50px;
+            width: 100%;
+            height: 500px;
+            border: 1px solid #000000;
+        }
+        #boxS div {
+            width:100px;
+            height: 100px;
+            color: #000000;
+            font-size: 13px;
+            text-align: center;
+            line-height: 25px;
+            /*background-color: #ff0000;*/
+            margin: 0 5px 5px 0;
+            display: inline-block;
+            border: 1px solid #ff0000;
+            word-wrap: break-word;
+        }
+        #boxS div span {
+            color: #ff0000;
+        }
+    </style>
+</head>
+<body>
+<div >
+    <textarea id="inputText" cols="30" rows="5">1artbcd1,，2a34bB，365BA.da、456fga  5TY 6JSese
+    7HTML
+         8ertv</textarea>
+    <div id="btnS">
+        <button id="btn1">左侧入</button>
+        <button id="btn2">右侧入</button>
+        <button id="btn3">左侧出</button>
+        <button id="btn4">右侧出</button>
+        <button id="clearAll">清空</button>
+        <button id="searchBtn">搜索</button>
+    </div>
+    <input type="text" id="search">
+
+</div>
+<div id="boxS">
+
+</div>
+<script src="task20.js">
+
+</script>
+</body>
+</html>
