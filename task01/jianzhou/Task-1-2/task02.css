@@ -1,0 +1,124 @@
+/*body,ul,p,h1,h2,h3,h4,dl,dd,form,input,textarea,select { padding:0; margin:0; font-family:arial; }*/
+/*li { list-style:none; }*/
+body,p{padding:0; margin:0; font-family:arial; }
+img { border:none; margin: 15px 0;}
+a { text-decoration:none; }
+a:hover { text-decoration:underline; }
+/*以上是网上找的！*/
+
+body {
+    background-color: rgb(223,223,223);
+}
+
+/*------------------------------*/
+.header {
+    width:100% ;
+    height: 60px;
+    background-color: rgb(52,52,52);
+}
+.header .navigation_bar{
+    float: right;
+}
+.header .navigation_bar a{
+    color: white;
+}
+.header .navigation_bar li{
+    float: left;
+    /*border: 1px solid white;*/
+    margin-right: 17px;
+    margin-top: 20px;
+}
+/*------------------------------*/
+.article {
+    background-color: white;
+
+    margin-top: 20px;
+    margin-right: 25px;
+    margin-bottom: 20px;
+    margin-left: 25px;
+
+    padding-top: 20px;
+    padding-right: 25px;
+    padding-bottom: 25px;
+    padding-left: 25px;
+
+}
+.article p {
+    line-height: 27px;
+}
+.article .text_need_indent {
+    text-indent: 30px;
+}
+#none_decoration_ul {
+    list-style: none;
+    /*border: 1px solid black;*/
+    padding-left: 15px;
+
+}
+.article .imgs_list li{
+    border: 1px solid darkgray;
+    width: 300px;
+    margin: 20px 0;
+    text-align: center;
+
+}
+.article .imgs_list b{
+    line-height: 50px;
+
+}
+.article .imgs_list img{
+    margin: 0 0 20px 0;
+    padding: 0;
+    width: 80%;
+}
+/*------------------------------*/
+.article .order_list {
+    line-height: 30px;
+    font-weight: bold;
+}
+.article table {
+    width:100%;
+    /*border: 1px solid rgb(204,204,204) ;*/
+    border-collapse:collapse;
+
+}
+.article  th,td{
+    font-size: 12px;
+    font-weight: bold;
+    padding: 3px;
+}
+/*------------------------------*/
+#email {
+    text-indent: 28.5%;
+}
+#password_one {
+    text-indent: 31%;
+}
+#password_two {
+    text-indent: 28.4%;
+}
+.article .my_message .three_king{
+    text-indent: 35%;
+}
+#geren {
+    text-indent: 32.5%;
+    /*width: 250px;*/
+    /*height: 50px;*/
+}
+
+.article .my_message .note {
+    text-indent: 39%;
+    color: rgb(168,168,168);
+}
+#confirm_btn {
+    width:100%;
+    height: 45px;
+    background-color: rgb(51,85,208);
+    color: white;
+    font-size: 20px;
+    border-radius:10px ;
+}
+.footer {
+    text-align: center;
+    padding-bottom: 10px;
+}
