@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Task-30:表单(二)多个表单项的动态校验</title>
+    <link rel="stylesheet" type="text/css" href="css/task30.css">
+</head>
+<body>
+     <form novalidate id="form1">
+        <p>
+          <label for="your-name">
+              <span class="label">名称</span>
+              <input type="text" id="your-name" name="your-name" required value="" autofocus="true">
+              <span class="note" id="note1" aria-live="polite"></span>
+          </label>
+        </p>
+         <p>
+             <label for="passport">
+                 <span class="label">密码</span>
+                 <input type="password" id="passport" name="passport" required value="">
+                 <span class="note" id="note2" aria-live="polite"></span>
+             </label>
+         </p>
+         <p>
+             <label for="confirm-passport">
+                 <span class="label">密码确认</span>
+                 <input type="password" id="confirm-passport" name="confirm-passport" required value="">
+                 <span class="note" id="note3" aria-live="polite"></span>
+             </label>
+         </p>
+         <p>
+             <label for="mail">
+                 <span class="label">邮箱</span>
+                 <input type="email" id="mail" name="mail" required value="">
+                 <span class="note" id="note4" aria-live="polite"></span>
+             </label>
+         </p>
+         <p>
+             <label for="phone">
+                 <span class="label">手机</span>
+                 <input type="text" id="phone" name="phone" required value="">
+                 <span class="note" id="note5" aria-live="polite"></span>
+             </label>
+         </p>
+         <p>
+             <button type="button" id="btn">提交</button>
+         </p>
+     </form>
+
+
+<script src="js/task30.js"></script>
+</body>
+</html>

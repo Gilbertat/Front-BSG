@@ -1,0 +1,38 @@
+section {
+    width: 100%;
+    height: 600px;
+    border: 1px solid #000000;
+
+}
+form {
+    margin: 0 auto;
+    width: 400px;
+    height: 200px;
+    border: 1px solid #00ff00;
+    /*text-align: center;*/
+    position: relative;
+}
+.student {
+    font-size: 20px;
+}
+.student input {
+    font-size: 20px;
+}
+div * {
+    font-size: 20px;
+}
+
+#school-div {
+    position: absolute;
+    top: 40px;
+    left: 0px;
+}
+#work-div {
+    position: absolute;
+    top: 40px;
+    left: 0px;
+    display: none;
+}
+#city-school {
+    width: 200px;
+}

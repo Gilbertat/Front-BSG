@@ -1,0 +1,38 @@
+form {
+    max-width:300px ;
+    position: relative;
+}
+form .label {
+    display: inline-block;
+    width: 80px;
+    text-align: right;
+    font-weight: bold;
+    font-size: 15px;
+}
+label > input {
+    border: 2px solid #000000;
+    display: inline-block;
+    width: 200px;
+    border-radius: 3px;
+    outline: none;
+}
+.note {
+    /*background-color: gainsboro;*/
+    display: block;
+    margin-left: 90px;
+    margin-top: 5px;
+    width: 200px;
+    font-size: 12px;
+    height: 20px;
+}
+button {
+    width: 80px;
+    height: 40px;
+    font-size: 18px;
+    position: absolute;
+    right: 10px;
+    bottom: -50px;
+    border-radius: 5px;
+    background-color: dodgerblue;
+    color: #ffffff;
+}

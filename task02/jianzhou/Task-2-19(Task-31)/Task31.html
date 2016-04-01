@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Task-31</title>
+    <link rel="stylesheet" type="text/css" href="task31.css">
+</head>
+<body>
+<section>
+<form>
+    <label class="student"><input type="radio" name="person" id="student" checked>在校生</label>
+    <label class="student"><input type="radio" name="person" id="not-student">非在校生</label>
+    <div id="school-div">
+        <label >学校
+        <select id="city">
+            <option value="bj">北京</option>
+            <option value="sh">上海</option>
+            <option value="gz">广州</option>
+        </select>
+        <select id="city-school">
+            <option>北京大学</option>
+            <option>清华大学</option>
+            <option>北京航空航天大学</option>
+            <option>北京师范大学</option>
+        </select>
+        </label>
+    </div>
+    <div id="work-div">
+        <label>工作单位 <input type="text" name="current-employer" id="current-employer"></label>
+    </div>
+</form>
+</section>
+
+<script src="task31.js">
+</script>
+</body>
+</html>
