@@ -1,0 +1,50 @@
+/*
+	1.位置属性（position,top,right,z-index,dispaly,float)
+	2.大小（width，height，padding，margin）
+	3.文字系列（font，line-height, letter-spacing, color- text-align)
+	4.背景（background，border等）
+	5.其他（animation，transition)
+*/
+
+.container {
+	position: relative;
+	margin: 20px;
+	padding: 20px;
+	background-color: #eee;
+}
+
+body{
+	background-color: #eee;
+	padding: 20px;
+	border: 1px solid #999;
+	margin: 20px;
+}
+
+.left {
+	border: 1px solid #999;
+	background-color: #FFFFFF;
+	padding: 20px;
+	width: 200px;
+	margin: 20px 20px 0px 0px;
+	float: left;
+}
+
+.center {
+	border: 1px solid #999;
+	background-color: #FFFFFF;
+	padding: 20px;
+	margin: 20px 300px 0 260px;
+	
+}
+
+.right{
+	border: 1px solid #999;
+	background-color: #FFFFFF;
+	width :120px;
+	padding: 20px;
+	margin: -267px 0px 0 920px;
+	
+}
+img {
+	border: 1px solid #999;
+}
