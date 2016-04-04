@@ -80,13 +80,13 @@ function sortAqiData(data) {
 function render(data) {
   var re_ul = document.getElementById('resort');
   var index_chr = ["一", "二", "三", "四", "五", "六", "七", "八", "九"];
-  for(var i=data.length-1;i>= 0;i--){
+  if(re_ul.getElementsByTagName('li').length>0)return;
+  for(var i=0;i < data.length;i++){
     (function(i){
-      var index = data.length-1-i;
       var tmp = [];
       var li = document.createElement('li');
       tmp.push("第");
-      tmp.push(index_chr[index]);
+      tmp.push(index_chr[i]);
       tmp.push("名：");
       tmp.push(data[i][0]);
       tmp.push('<b>');
