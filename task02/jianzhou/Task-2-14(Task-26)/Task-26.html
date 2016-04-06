@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>行星与飞船一</title>
+    <link rel="stylesheet" type="text/css" href="css/task26.css">
+</head>
+<body>
+<div id="container">
+    <!--操作面板-->
+    <div id="control">
+        <div id="control-title">操作面板</div>
+        <div id="buttons">
+            <div data-id="0">
+                <span>第一轨道</span>
+                <button type="button" data-type="create" data-status="create" id="btn01" btn-value="0">创建飞船</button>
+                <button type="button" disabled="true"  data-status="stop" id="btn02" btn-value="0">飞行</button>
+            </div>
+            <div data-id="1">
+                <span>第二轨道</span>
+                <button type="button" data-type="create" data-status="create" id="btn03" btn-value="1">创建飞船</button>
+                <button type="button" disabled="disabled" data-status="stop" id="btn04" btn-value="1">飞行</button>
+            </div>
+            <div data-id="2">
+                <span>第三轨道</span>
+                <button type="button" data-type="create" data-status="create" id="btn05" btn-value="2">创建飞船</button>
+                <button type="button" disabled="disabled"  data-status="stop" id="btn06" btn-value="2">飞行</button>
+            </div>
+            <div data-id="3">
+                <span>第四轨道</span>
+                <button type="button" data-type="create" data-status="create" id="btn07" btn-value="3">创建飞船</button>
+                <button type="button" disabled="disabled" data-status="stop" id="btn08" btn-value="3">飞行</button>
+            </div>
+        </div>
+    </div>
+    <!--轨道和星球-->
+    <div id="earth-and-orbits">
+        <div id="earth"></div>
+        <div id="orbits">
+            <div id="orbit0" class="orbit"></div>
+            <div id="orbit1" class="orbit"></div>
+            <div id="orbit2" class="orbit"></div>
+            <div id="orbit3" class="orbit"></div>
+        </div>
+        <div id="ships">
+
+        </div>
+    </div>
+    <!--信息面板-->
+    <div id="console">
+        <div id="console-title">信息面板</div><div id="console-text"></div>
+        <div><textarea id="outputs" cols="50" rows="10"></textarea></div>
+    </div>
+</div>
+
+
+<script src="js/commander.js"></script>
+<script src="js/airship.js"></script>
+<script src="js/Mediator.js"></script>
+<script src="js/Util.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

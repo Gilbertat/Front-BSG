@@ -1,0 +1,194 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#container {
+  background-color: #cccccc;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+//设置圆角的函数
+.border-radius(@radius){
+  border-radius: @radius;
+  -moz-border-radius: @radius;
+  -webkit-border-radius: @radius;
+
+}
+//居中函数
+.centering(@myWidth ;@myHeight){
+  position: absolute;
+  width: @myWidth;
+  height: @myHeight;
+  left: 50%;
+  top: 50%;
+  margin-left:-(0.5*@myWidth);
+  margin-top:-(0.5*@myHeight);
+}
+.action(@name;@radio){
+  @keyframes @name {
+    from{
+      transform: rotate(0deg) translate(@radio) rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg) translate(@radio) rotate(-360deg);
+    }
+  }
+  @-webkit-keyframes action {
+    from{
+      transform: rotate(0deg) translate(@radio) rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg) translate(@radio) rotate(-360deg);
+    }
+  }
+  @-moz-keyframes action{
+    from{
+      transform: rotate(0deg) translate(@radio) rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg) translate(@radio) rotate(-360deg);
+    }
+  }
+}
+//设置控制台样式
+#control {
+  background-color: #00ff00;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  width: 200px;
+  .border-radius(5px);
+  #control-title {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    text-align: center;
+  }
+}
+
+//设置轨道的样式和飞船样式
+#earth-and-orbits {
+  background-color: yellow;
+  .centering(500px, 500px);
+  #earth {
+    background-color: blue;
+    .centering(50px;50px);
+    .border-radius(50px)
+  }
+  #orbit0 {
+    border: 1px solid #000000;
+    .centering(150px;150px);
+    .border-radius(75px);
+  }
+  #orbit1 {
+    border: 1px solid #000000;
+    .centering(250px;250px);
+    .border-radius(125px);
+  }
+  #orbit2 {
+    border: 1px solid #000000;
+    .centering(350px;350px);
+    .border-radius(175px);
+  }
+  #orbit3 {
+    border: 1px solid #000000;
+    .centering(450px;450px);
+    .border-radius(225px);
+  }
+
+  #ships{
+    .action(action;75px);
+    .action(action1;125px);
+    .action(action2;175px);
+    .action(action3;225px);
+
+    #ship0 {
+      .centering(40px,40px);
+      .border-radius(20px);
+      border: 1px solid #000000;
+      background-color: #00ff00;
+      line-height: 40px;
+      text-align: center;
+
+      animation: action 10s linear infinite;
+      -moz-animation: action 10s linear infinite;
+      -o-animation: action 10s linear infinite;
+      -webkit-animation: action 10s linear infinite;
+
+      animation-play-state:paused;
+      -moz-animation-play-state:paused;
+      -webkit-animation-play-state:paused;
+      -o-animation-play-state:paused;
+    }
+
+    #ship1 {
+      .centering(40px,40px);
+      .border-radius(20px);
+      border: 1px solid #000000;
+
+      background-color: #00ff00;
+      line-height: 40px;
+      text-align: center;
+      animation: action1 10s linear infinite;
+      -moz-animation: action1 10s linear infinite;
+      -o-animation: action1 10s linear infinite;
+      -webkit-animation: action1 10s linear infinite;
+
+      animation-play-state:paused;
+      -moz-animation-play-state:paused;
+      -webkit-animation-play-state:paused;
+      -o-animation-play-state:paused;
+    }
+    #ship2 {
+      .centering(40px,40px);
+      .border-radius(20px);
+      border: 1px solid #000000;
+
+      background-color: #00ff00;
+      line-height: 40px;
+      text-align: center;
+      animation: action2 10s linear infinite;
+      -moz-animation: action2 10s linear infinite;
+      -o-animation: action2 10s linear infinite;
+      -webkit-animation: action2 10s linear infinite;
+      animation-play-state:paused;
+      -moz-animation-play-state:paused;
+      -webkit-animation-play-state:paused;
+      -o-animation-play-state:paused;
+    }
+    #ship3 {
+      .centering(40px,40px);
+      .border-radius(20px);
+      border: 1px solid #000000;
+      background-color: #00ff00;
+      line-height: 40px;
+      text-align: center;
+      animation: action3 10s linear infinite;
+      -moz-animation: action3 10s linear infinite;
+      -o-animation: action3 10s linear infinite;
+      -webkit-animation: action3 10s linear infinite;
+      animation-play-state:paused;
+      -moz-animation-play-state:paused;
+      -webkit-animation-play-state:paused;
+      -o-animation-play-state:paused;
+    }
+
+  }
+}
+
+#console {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  #console-title {
+    margin: 10px 0;
+    text-align: center;
+  }
+  #outputs {
+    resize: none;
+  }
+}

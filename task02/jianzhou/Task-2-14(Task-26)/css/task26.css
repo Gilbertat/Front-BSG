@@ -1,0 +1,307 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+#container {
+  background-color: #cccccc;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+#control {
+  background-color: #00ff00;
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  width: 200px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+#control #control-title {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  text-align: center;
+}
+#earth-and-orbits {
+  background-color: yellow;
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  left: 50%;
+  top: 50%;
+  margin-left: -250px;
+  margin-top: -250px;
+}
+#earth-and-orbits #earth {
+  background-color: blue;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  left: 50%;
+  top: 50%;
+  margin-left: -25px;
+  margin-top: -25px;
+  border-radius: 50px;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+}
+#earth-and-orbits #orbit0 {
+  border: 1px solid #000000;
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  left: 50%;
+  top: 50%;
+  margin-left: -75px;
+  margin-top: -75px;
+  border-radius: 75px;
+  -moz-border-radius: 75px;
+  -webkit-border-radius: 75px;
+}
+#earth-and-orbits #orbit1 {
+  border: 1px solid #000000;
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  left: 50%;
+  top: 50%;
+  margin-left: -125px;
+  margin-top: -125px;
+  border-radius: 125px;
+  -moz-border-radius: 125px;
+  -webkit-border-radius: 125px;
+}
+#earth-and-orbits #orbit2 {
+  border: 1px solid #000000;
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  left: 50%;
+  top: 50%;
+  margin-left: -175px;
+  margin-top: -175px;
+  border-radius: 175px;
+  -moz-border-radius: 175px;
+  -webkit-border-radius: 175px;
+}
+#earth-and-orbits #orbit3 {
+  border: 1px solid #000000;
+  position: absolute;
+  width: 450px;
+  height: 450px;
+  left: 50%;
+  top: 50%;
+  margin-left: -225px;
+  margin-top: -225px;
+  border-radius: 225px;
+  -moz-border-radius: 225px;
+  -webkit-border-radius: 225px;
+}
+@keyframes action {
+  from {
+    transform: rotate(0deg) translate(75px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translate(75px) rotate(-360deg);
+  }
+}
+@-webkit-keyframes action {
+  from {
+    transform: rotate(0deg) translate(75px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translate(75px) rotate(-360deg);
+  }
+}
+@-moz-keyframes action {
+  from {
+    transform: rotate(0deg) translate(75px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translate(75px) rotate(-360deg);
+  }
+}
+@keyframes action1 {
+  from {
+    transform: rotate(0deg) translate(125px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translate(125px) rotate(-360deg);
+  }
+}
+@-webkit-keyframes action {
+  from {
+    transform: rotate(0deg) translate(125px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translate(125px) rotate(-360deg);
+  }
+}
+@-moz-keyframes action {
+  from {
+    transform: rotate(0deg) translate(125px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translate(125px) rotate(-360deg);
+  }
+}
+@keyframes action2 {
+  from {
+    transform: rotate(0deg) translate(175px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translate(175px) rotate(-360deg);
+  }
+}
+@-webkit-keyframes action {
+  from {
+    transform: rotate(0deg) translate(175px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translate(175px) rotate(-360deg);
+  }
+}
+@-moz-keyframes action {
+  from {
+    transform: rotate(0deg) translate(175px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translate(175px) rotate(-360deg);
+  }
+}
+@keyframes action3 {
+  from {
+    transform: rotate(0deg) translate(225px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translate(225px) rotate(-360deg);
+  }
+}
+@-webkit-keyframes action {
+  from {
+    transform: rotate(0deg) translate(225px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translate(225px) rotate(-360deg);
+  }
+}
+@-moz-keyframes action {
+  from {
+    transform: rotate(0deg) translate(225px) rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg) translate(225px) rotate(-360deg);
+  }
+}
+#earth-and-orbits #ships #ship0 {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  left: 50%;
+  top: 50%;
+  margin-left: -20px;
+  margin-top: -20px;
+  border-radius: 20px;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  border: 1px solid #000000;
+  background-color: #00ff00;
+  line-height: 40px;
+  text-align: center;
+  animation: action 10s linear infinite;
+  -moz-animation: action 10s linear infinite;
+  -o-animation: action 10s linear infinite;
+  -webkit-animation: action 10s linear infinite;
+  animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  -webkit-animation-play-state: paused;
+  -o-animation-play-state: paused;
+}
+#earth-and-orbits #ships #ship1 {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  left: 50%;
+  top: 50%;
+  margin-left: -20px;
+  margin-top: -20px;
+  border-radius: 20px;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  border: 1px solid #000000;
+  background-color: #00ff00;
+  line-height: 40px;
+  text-align: center;
+  animation: action1 10s linear infinite;
+  -moz-animation: action1 10s linear infinite;
+  -o-animation: action1 10s linear infinite;
+  -webkit-animation: action1 10s linear infinite;
+  animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  -webkit-animation-play-state: paused;
+  -o-animation-play-state: paused;
+}
+#earth-and-orbits #ships #ship2 {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  left: 50%;
+  top: 50%;
+  margin-left: -20px;
+  margin-top: -20px;
+  border-radius: 20px;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  border: 1px solid #000000;
+  background-color: #00ff00;
+  line-height: 40px;
+  text-align: center;
+  animation: action2 10s linear infinite;
+  -moz-animation: action2 10s linear infinite;
+  -o-animation: action2 10s linear infinite;
+  -webkit-animation: action2 10s linear infinite;
+  animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  -webkit-animation-play-state: paused;
+  -o-animation-play-state: paused;
+}
+#earth-and-orbits #ships #ship3 {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  left: 50%;
+  top: 50%;
+  margin-left: -20px;
+  margin-top: -20px;
+  border-radius: 20px;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  border: 1px solid #000000;
+  background-color: #00ff00;
+  line-height: 40px;
+  text-align: center;
+  animation: action3 10s linear infinite;
+  -moz-animation: action3 10s linear infinite;
+  -o-animation: action3 10s linear infinite;
+  -webkit-animation: action3 10s linear infinite;
+  animation-play-state: paused;
+  -moz-animation-play-state: paused;
+  -webkit-animation-play-state: paused;
+  -o-animation-play-state: paused;
+}
+#console {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+}
+#console #console-title {
+  margin: 10px 0;
+  text-align: center;
+}
+#console #outputs {
+  resize: none;
+}
