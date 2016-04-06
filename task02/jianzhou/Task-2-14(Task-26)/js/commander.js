@@ -25,10 +25,10 @@ Commander.prototype = {
     //这个是以指挥官自己的视角看待的飞船的摧毁情况
     destroyAirship : function(target){
         var num = target.getAttribute('btn-value');
-        this.airships[num] = null;
+//        this.airships[num] = null;
         var message = {
             id:target.getAttribute('btn-value'),
-             command: 'destroy'
+            command: 'destroy'
          };
         mediator.sendMessage(message);
 

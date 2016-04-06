@@ -21,12 +21,10 @@ Airship.prototype = {
                     this.destroySystem();
                     break;
                 case 'start':
-//                    changeFlyingBtnStatus(oBtn, status);
                     window.clearInterval(this.timeID);
                     this.flying();
                     break;
                 case 'stop':
-//                    changeFlyingBtnStatus(oBtn, status);
                     window.clearInterval(this.timeID);
                     this.stopAndCharging();
                     break;
@@ -36,6 +34,15 @@ Airship.prototype = {
     },
 
     destroySystem: function (){
+        console.log('des-3');
+        var oShip = document.getElementById('ship'+this.airShipId);
+
+        var airship = 'ship'+parseInt(this.airShipId);
+        var oAirship =  document.getElementById(airship);
+        window.clearInterval(this.timeID);
+        oAirship.parentNode.removeChild(oAirship);
+        commander.airships[this.airShipId] = null;
+
         oOutput.innerHTML += getNowFormatDate() + ': 飞船'+ this.airShipId + '号' + '成功销毁' + '\r\n';
     },
 
