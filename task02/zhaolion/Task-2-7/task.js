@@ -39,6 +39,14 @@ function aryChange(inout,direction) {
     return;
   }
   var num = Number(value);
+  if(num<10 || num >100){
+    alert('10~100');
+    return;
+  }
+  if(ary.length>=60){
+    alert('array 最多 60个');
+    return;
+  }
   if(inout === 0){
     if(direction === 0){  // left
       ary.unshift(num);
