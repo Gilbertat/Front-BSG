@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>任务十八：基础JavaScript练习（一）</title>
+  <script src="task.js"></script>
+  <style media="screen">
+    #array {
+      width: 100%;
+      height: 100px;
+      border: 1px solid #000000;
+      margin-top: 5px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: flex-end;
+    }
+
+    #array div{
+      height: 100px;
+      margin-right: 10px;
+      display: inline-block;
+      background-color: #f00;
+      line-height: 100px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div id="pane">
+    <label for="">编号：</label>
+    <input type="text" name="number" id="numberInput">
+    <input type="button" name="lf-in" value="左侧进">
+    <input type="button" name="rf-in" value="右侧进">
+    <input type="button" name="lf-out" value="左侧出">
+    <input type="button" name="rf-out" value="右侧出">
+  </div>
+  <div id="array">
+
+  </div>
+</body>
+</html>

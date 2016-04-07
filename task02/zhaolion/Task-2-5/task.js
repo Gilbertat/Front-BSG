@@ -94,7 +94,7 @@ function renderChart() {
   width = Math.floor((1/cnt)*100) + "%;";
   renderDiv.innerHTML = "";
   for(var i in buf){
-    renderDiv.innerHTML += '<div '+'style="height:' + buf[i] + ';'+'width:'+width+'background-color:'+randomColor()+';'+'"' + 'title='+'"'+ i+':'+ 'AQI '+ buf[i] +'"'+ '>' + '</div>';
+    renderDiv.innerHTML += '<div '+'class="subdiv"'+'style="height:' + buf[i] + ';'+'width:'+width+'background-color:'+randomColor()+';'+'"' + 'title='+'"'+ i+':'+ 'AQI '+ buf[i] +'"'+ '>' + '</div>';
   }
 }
 
@@ -133,7 +133,7 @@ function citySelectChange() {
 /**
  * 初始化日、周、月的radio事件，当点击时，调用函数graTimeChange
  */
-function initGraTimeForm() {
+function initGraTimeForm () {
   var radionBtns = document.getElementsByName('gra-time');
   for(var i=0;i<radionBtns.length;i++){
     radionBtns[i].onclick = graTimeChange;
