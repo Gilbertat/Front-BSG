@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>任务十八：基础JavaScript练习（一）</title>
+  <script src="task.js"></script>
+  <style media="screen">
+    #array {
+      width: 100%;
+      margin-top: 5px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: flex-end;
+    }
+
+    #array div{
+      height: 100px;
+      margin-right: 10px;
+      display: inline-block;
+      background-color: #f00;
+      line-height: 100px;
+      text-align: center;
+      color: #fff;
+    }
+
+    .input-area textarea {
+      width: 200px;
+      overflow-y: visible;
+    }
+  </style>
+</head>
+<body>
+  <div class="input-area">
+    <textarea id="numberInput" name="name" rows="8" cols="100"></textarea>
+  </div>
+  <div id="pane">
+    <input type="button" name="lf-in" value="左侧进">
+    <input type="button" name="rf-in" value="右侧进">
+    <input type="button" name="lf-out" value="左侧出">
+    <input type="button" name="rf-out" value="右侧出">
+    <input type="button" name="search" value="搜索">
+    <input type="text" name="name" value="" id="search-key">
+  </div>
+  <div id="array">
+
+  </div>
+</body>
+</html>
