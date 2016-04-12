@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Task-38</title>
+    <link href="" rel="stylesheet" type="text/css">
+    <style>
+        body {
+            text-align: center;
+            position: relative;
+        }
+        button {
+            position: absolute;
+            left:550px;
+            top:20px;
+        }
+        table { border:0;border-collapse:collapse;width: 500px}
+
+        td	{ font:normal 12px/17px Arial;padding:2px;width:100px;}
+        th	{ font:bold 12px/17px Arial;text-align:center;padding:4px;border-bottom:1px solid #333;}
+        .even { background:#FFF38F;}  /* 偶数行样式*/
+        .odd	{ background:#FFFFEE;}  /* 奇数行样式*/
+    </style>
+</head>
+<body>
+
+<table>
+    <thead>
+    <tr>
+        <th>姓名</th><th value="1">语文</th><th value="2">数学</th><th value="3">英语</th><th value="4">总分</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr>
+        <td>小明</td><td>80</td><td>90</td><td>70</td><td>240</td>
+    </tr>
+    <tr>
+        <td>小红</td><td>90</td><td>60</td><td>95</td><td>245</td>
+    </tr>
+    <tr>
+        <td>小亮</td><td>60</td><td>94</td><td>70</td><td>224</td>
+    </tr>
+    <tr>
+        <td>小李</td><td>100</td><td>96</td><td>94</td><td>290</td>
+    </tr>
+    <tr>
+        <td>小正</td><td>100</td><td>98</td><td>96</td><td>293</td>
+    </tr>
+    </tbody>
+
+</table>
+<button id="change-btn" order="descending">change to ascending</button>
+<script src="../jquery-1.12.3.js"></script>
+<script type="text/javascript" src="task38.js">
+</script>
+</body>
+</html>
