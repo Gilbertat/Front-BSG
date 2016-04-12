@@ -1,0 +1,47 @@
+html ,body{
+    margin: 0;
+    padding: 0;
+}
+body {
+    text-align: center;
+    position: relative;
+}
+button {
+    position: absolute;
+    left:550px;
+    top:20px;
+}
+table {
+    border:1px solid #000000;
+    border-collapse:collapse;
+    width: 500px;
+    margin: 0 auto;
+}
+td	{
+    font:normal 12px/17px Arial;
+    padding:2px;
+    width:100px;
+    height: 40px
+}
+th	{
+    font:bold 12px/17px Arial;
+    color: #ffffff;
+    text-align:center;
+    padding:4px;
+    border-bottom:1px solid #333;
+    height: 50px;
+    background-color: rgb(38,189,133);
+
+}
+.even { background:#FFF38F;}  /* 偶数行样式*/
+.odd	{ background:#FFFFEE;}  /* 奇数行样式*/
+.sticky-thead {
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 100;
+
+}
+.sticky-wrap {
+    position: relative;
+}
