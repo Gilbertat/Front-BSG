@@ -1,0 +1,223 @@
+html,body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+img {
+    display: block;
+    margin: 1px;
+}
+#container {
+    width: 80%;
+    height: 100%;
+    border: 1px solid #000000;
+    position: relative;
+    margin: 0 auto;
+}
+.btn {
+    width: 50px;
+    height: 50px;
+    background-color: greenyellow;
+}
+#btn-prev {
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    -webkit-clip-path:polygon(5px 25px, 50px 0px, 50px 50px) ;
+}
+#btn-next{
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    -webkit-clip-path:polygon(0px 0px, 45px 25px, 0px 50px) ;
+}
+.display-div {
+    width: 800px;
+    height: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left:-400px ;
+    margin-top:-250px ;
+}
+.display-one{
+
+}
+.display-two{
+
+}
+.display-three {
+
+}
+.display-four {
+
+}
+.display-five {
+
+}
+.display-six {
+
+}
+.display-one #pic1 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 800px;
+    height: 500px;
+}
+/*两张图片的布局*/
+.display-two #pic1 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 800px;
+    height: 500px;
+    -webkit-clip-path:polygon(0px 0px, 66.66% 0px,33.33% 100%,0px 100%) ;
+}
+.display-two #pic2 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 800px;
+    height: 500px;
+    -webkit-clip-path:polygon(66.66% 0px ,100% 0,100% 100%,33.33% 100%) ;
+}
+/*三张图片时的布局*/
+.display-three #pic1 {
+    position: absolute;
+    left: 0px;
+    top: 0;
+    width: 550px;
+    height: 500px;
+
+}
+.display-three #pic2 {
+    position: absolute;
+    right:0;
+    top: 0;
+    width: 250px;
+    height: 250px;
+
+}
+.display-three #pic3 {
+    position: absolute;
+    right: 0;
+    top: 250px;
+    width: 250px;
+    height: 250px;
+}
+/*四张图片的布局*/
+.display-four #pic1 {
+    position: absolute;
+    left: 0px;
+    top: 0;
+    width: 400px;
+    height: 250px;
+
+}
+.display-four #pic2 {
+    position: absolute;
+    left: 400px;
+    top: 0;
+    width: 400px;
+    height: 250px;
+
+}
+.display-four #pic3 {
+    position: absolute;
+    left: 400px;
+    top: 250px;
+    width: 400px;
+    height: 250px;
+}
+.display-four #pic4 {
+    position: absolute;
+    left: 0;
+    top: 250px;
+    width: 400px;
+    height: 250px;
+}
+/*五张图片的布局*/
+.display-five #pic1 {
+    position: absolute;
+    left: 0px;
+    top: 0;
+    width: 66.66%;
+    height: 66.66%;
+
+}
+.display-five #pic2 {
+    position: absolute;
+    left:66.66%;
+    top: 0;
+    width: 33.33%;
+    height: 33.33%;
+
+}
+.display-five #pic3 {
+    position: absolute;
+    left: 0;
+    top: 66.66%;
+    width: 33.33%;
+    height: 33.34%;
+}
+.display-five #pic4 {
+    position: absolute;
+    left: 33.33%;
+    top: 66.66%;
+    width: 33.33%;
+    height: 33.34%;
+}
+.display-five #pic5 {
+    position: absolute;
+    left: 66.66%;
+    top: 33.34%;
+    width: 33.34%;
+    height:66.66%
+}
+/*六张图片的布局*/
+.display-six #pic1 {
+    position: absolute;
+    left: 0px;
+    top: 0;
+    width: 66.66%;
+    height: 66.66%;
+
+}
+.display-six #pic2 {
+    position: absolute;
+    left: 66.66%;
+    top: 0;
+    width: 33.34%;
+    height: 33.34%;
+
+}
+.display-six #pic3 {
+    position: absolute;
+    left: 0;
+    top: 66.66%;
+    width: 33.33%;
+    height: 33.34%;
+}
+.display-six #pic4 {
+    position: absolute;
+    left: 33.33%;
+    top: 66.66%;
+    width: 33.33%;
+    height: 33.34%;
+}
+.display-six #pic5 {
+    position: absolute;
+    left: 66.66%;
+    top: 33.34%;
+    width: 33.34%;
+    height:33.33%
+}
+.display-six #pic6 {
+    position: absolute;
+    left: 66.66%;
+    top: 66.67%;
+    width: 33.34%;
+    height:33.33%
+}
