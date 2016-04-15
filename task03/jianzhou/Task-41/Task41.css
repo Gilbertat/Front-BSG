@@ -1,0 +1,19 @@
+#data-select {
+    display: none;
+}
+table{
+    border: 1px solid green;
+}
+th {
+    width: 30px;
+}
+
+td {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    color: #000000;
+}
+.weekday {
+    color: red;
+}

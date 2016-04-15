@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Task-41 日历组件</title>
+    <link href="Task41.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <input type="text" value="" id="day">
+    <button id="confirm-btn">确定</button>
+    <div id="data-select">
+        <div id="data-select-head">
+            <button id="left">上月</button>
+            <select name="year" id="year">
+            </select>
+            <select name="month" id="month">
+                <option value="0">January</option><option value="1">February</option><option value="2">March</option><option value="3">April</option>
+                <option value="4">May</option><option value="5">June</option><option value="6">July</option><option value="7">August</option>
+                <option value="8">September</option><option value="9">October</option><option value="10">November</option><option value="11">December</option>
+            </select>
+
+            <button id="right">下月</button>
+        </div>
+        <div id="data-select-body">
+            <table>
+                <thead><tr><th class="weekday">日</th><th>一</th><th>二</th><th>三</th><th>四</th><th>五</th><th class="weekday">六</th></tr></thead>
+
+                <tbody>
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+
+<script src="../jquery-1.12.3.js"></script>
+<script type="text/javascript" src="task41.js">
+</script>
+</body>
+</html>
