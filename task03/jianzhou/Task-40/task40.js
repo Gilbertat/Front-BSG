@@ -27,14 +27,12 @@ $(function () {
     //设置每个月的天数
     function setEveryDay(year,month){
         var $tds = $('tbody td');
-        //当月下个月的前一天,就是本月最后一天
-        var lastDayOfMonth = new Date(year,month+1,0);
         //当月第一天
         var firstDayOfMonth = new Date(year,month,1);
         //本月第一天是星期几
         var whatDayOfWeek = firstDayOfMonth.getDay();
         //月份天数
-        var numOfDay = lastDayOfMonth.getDate();
+        var numOfDay = getNumOfDayOfOneMonth(parseInt(year),parseInt(month)+1);
         //设置当月数据
         $tds.each(function(){
             $(this).css({"color":"black","background-color":"white"});
@@ -100,6 +98,18 @@ $(function () {
             return '0'+num;
         }else{
             return num;
+        }
+    }
+
+    function getNumOfDayOfOneMonth(year,month){
+        if(month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12){
+            return 31;
+        }else if(month == 4 || month == 6 || month == 9 || month == 11){
+            return 30;
+        }else if((year % 4 == 0) && (year % 100 != 0 || year % 400 == 0)){
+            return 29;
+        }else{
+            return 28;
         }
     }
 });
