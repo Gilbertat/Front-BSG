@@ -1,0 +1,92 @@
+th {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+tbody tr:nth-child(1),tr:nth-child(2),tr:nth-child(3) {
+    color: #ff0000;
+}
+
+tbody tr:nth-child(2n) {
+    background-color: darkgray;
+}
+
+input {
+    width: 100px;
+    margin-top:10px;
+}
+
+input:focus {
+    width: 200px;
+    border: 1px solid dodgerblue;
+    margin-top:10px;
+}
+
+#banner {
+    width: 300px;
+    height: 100px;
+    border: 1px solid beige;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+.inner-block {
+    width: 300px;
+    height: 100px;
+    display: inline-block;
+    position: absolute;
+}
+#banner >  div:nth-child(1) {
+    background-color: greenyellow;
+    position: absolute;
+    left: 0;
+}
+#banner >  div:nth-child(2) {
+    background-color: orangered;
+    left: 300px;
+}
+#banner >  div:nth-child(3) {
+    background-color: beige;
+    left: 600px;
+}
+.a-link-box {
+    width: 20px;
+    height: 20px;
+    background-color: rgba(217,217,217,.5);
+    position: absolute;
+    bottom: 0px;
+    text-align: center;
+    line-height: 20px;
+
+}
+#outer-banner >  div:nth-child(2) {
+    right: 60px;
+}
+#outer-banner >  div:nth-child(3) {
+    right: 35px;
+}
+#outer-banner >  div:nth-child(4) {
+    right: 10px;
+}
+a {
+    text-decoration: none;
+}
+
+#outer-banner {
+    margin-top: 10px;
+    position: relative;
+    width: 300px;
+    height: 100px;
+    border: 1px solid #000000;
+    padding: 0;
+}
+a[name*=div] {
+    display: inline-block;
+    width:300px;
+}
+
+.a-link-box:hover {
+    background: orangered;
+}
+
