@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="node_modules/questionnairemvc-app-css/task50.css" rel="stylesheet" type="text/css">
+    <link href="node_modules/questionnairemvc-app-css/poping.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <!--弹框层-->
+    <div id="cover"></div>
+    <div class="pop-tip">
+        <div id="inner-title">提示</div>
+        <div id="inner-text"><p>确定删除这项问卷调查吗?</p>
+            <button value="confirm" id="confirm-btn" cid="">确定</button>
+            <button value="cancel" id="cancel-btn">取消</button>
+        </div>
+    </div>
+
+    <section class="questionnaire">
+        <header>
+            <div id="circle">?</div>
+            <div class="btn">问卷管理</div>
+            <div class="btn">我的问卷</div>
+        </header>
+        <section class="main">
+            <button id="new-questionnaire">+新建问卷</button>
+            <table class="questionnaire-list">
+                <tr><th></th><th>标题</th><th>时间</th><th>状态</th><th>操作</th></tr>
+            </table>
+        </section>
+    </section>
+
+<!--每条问卷的模板-->
+<script type="text/template" id="item-template">
+
+        <td><input class="toggle" type="checkbox" ></td>
+        <td><label><%- title %></label></td>
+        <td><label><%- deadline %></label></td>
+        <td><label><%- state %></label></td>
+        <td>
+            <button class="edit">编辑</button>
+            <button class="destroy">删除</button>
+            <button class="check-data">查看数据</button>
+        </td>
+</script>
+<!--<script src="node_modules/questionnairemvc-common/base.js"></script>-->
+<script src="node_modules/jquery/dist/jquery.js"></script>
+<script src="node_modules/underscore/underscore.js"></script>
+<script src="node_modules/backbone/backbone.js"></script>
+<script src="node_modules/backbone.localstorage/backbone.localStorage.js"></script>
+<script src="js/models/questionnaire.js"></script>
+<script src="js/collections/questionnaires.js"></script>
+<script src="js/views/questionnaire-view.js"></script>
+<script src="js/views/app-view.js"></script>
+
+<script src="js/app.js"></script>
+
+
+<script type="text/javascript">
+$(function () {
+
+});
+</script>
+</body>
+</html>
