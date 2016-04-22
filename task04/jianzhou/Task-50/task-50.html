@@ -47,7 +47,6 @@
             <button class="operate-btn destroy">删除</button>
             <button class="operate-btn check-data">查看数据</button>
         </td>
-
 </script>
 
 <!--每条问卷的模板-->
@@ -73,8 +72,8 @@
             <label>D<input type="text" value="hehe" id="answer4"></label>
         </div>
         <div id="text-div" class="tabbar" name="text">
-            <label>题目序号<input type="text" name="serial"></label>
-            <label>题目<input type="text" name="serial"></label>
+            <label>题目序号<input type="text" name="serial" id="text-serial"></label>
+            <label>题目<input type="text" name="serial" id="text-title"></label>
         </div>
     </div>
 
@@ -89,26 +88,31 @@
 
     <!--//每个题目的模板-->
     <script type="text/template" id="single-question-template">
-        <label><%- serial %></label><label>单选题</label>
-        <label><%- questionTitle %></label>
-        <input type="radio" name="answer" ><%- alternativeAnswer[0] %>
-        <input type="radio" name="answer" ><%- alternativeAnswer[1] %>
-        <input type="radio" name="answer" ><%- alternativeAnswer[2] %>
+        <span><%- serial %></span><span>(单选题)</span>
+        <span><%- questionTitle %></span><br>
+        <input type="radio" name="answer" ><%- alternativeAnswer[0] %><br>
+        <input type="radio" name="answer" ><%- alternativeAnswer[1] %><br>
+        <input type="radio" name="answer" ><%- alternativeAnswer[2] %><br>
         <input type="radio" name="answer" ><%- alternativeAnswer[3] %>
+        <button class="up">上移</button><button class="down">下移</button>
+        <button class="delete">删除</button><button class="copy">复制</button>
     </script>
-    <!--//每个题目的模板-->
     <script type="text/template" id="multi-question-template">
-        <label><%- serial %></label><label>多选题</label>
-        <label><%- questionTitle %></label>
-        <input type="checkbox" name="answer" ><%- alternativeAnswer[0] %>
-        <input type="checkbox" name="answer" ><%- alternativeAnswer[1] %>
-        <input type="checkbox" name="answer" ><%- alternativeAnswer[2] %>
-        <input type="checkbox" name="answer" ><%- alternativeAnswer[3] %>
+        <span><%- serial %></span><span>(多选题)</span>
+        <span><%- questionTitle %></span><br>
+        <input type="checkbox" name="answer" ><%- alternativeAnswer[0] %><br>
+        <input type="checkbox" name="answer" ><%- alternativeAnswer[1] %><br>
+        <input type="checkbox" name="answer" ><%- alternativeAnswer[2] %><br>
+        <input type="checkbox" name="answer" ><%- alternativeAnswer[3] %><br>
+        <button class="up">上移</button><button class="down">下移</button>
+        <button class="delete">删除</button><button class="copy">复制</button>
     </script>
     <script type="text/template" id="text-question-template">
-        <label><%- serial %></label><label>文本题</label>
-        <label><%- questionTitle %></label>
-        <input type="text" name="answer" >
+        <span><%- serial %></span><span>(文本题)</span>
+        <span><%- questionTitle %></span><br><br>
+        <textarea type="text" name="answer" ></textarea>
+        <button class="up">上移</button><button class="down">下移</button>
+        <button class="delete">删除</button><button class="copy">复制</button>
     </script>
 <!--<script src="node_modules/questionnairemvc-common/base.js"></script>-->
 <script src="node_modules/jquery/dist/jquery.js"></script>

@@ -15,9 +15,51 @@ var app = app || {};
             'click .summit':"summitOneQuestion",
             'click #single':"chooseQuestionType",
             'click #multi':"chooseQuestionType",
-            'click #text':"chooseQuestionType"
+            'click #text':"chooseQuestionType",
+            //底下question界面冒泡上来的事件处理机制
+            'click .delete':'deleteOneQuestion',
+            'click .up':'up',
+            'click .down':'down',
+            'click .copy':'copy'
         },
-
+        up:function(){
+            var tempNum = parseInt(event.target.getAttribute('num'));
+            //获取存储题目的数组
+            var data = this.model.get('data');
+            console.log(typeof tempNum);
+            var tempQuestion = data[tempNum-1];
+            data[tempNum-1] = data[tempNum];
+            data[tempNum] = tempQuestion;
+            console.log(data);
+            var questions = new app.Questions(data);
+            this.model.set('data',questions,{silent:true});
+            this.model.save();
+        },
+        down:function(){
+            var tempNum = parseInt(event.target.getAttribute('num'));
+            //获取存储题目的数组
+            var data = this.model.get('data');
+            console.log(typeof tempNum);
+            var tempQuestion = data[tempNum+1];
+            data[tempNum+1] = data[tempNum];
+            data[tempNum] = tempQuestion;
+            console.log(data);
+            var questions = new app.Questions(data);
+            this.model.set('data',questions,{silent:true});
+            this.model.save();
+        },
+        copy:function(){
+            var tempNum = event.target.getAttribute('num');
+            console.log('tempNum',tempNum);
+            //获取存储题目的数组
+            var data = this.model.get('data');
+            var tempQuestion = data[tempNum];
+            data.splice(tempNum ,0,tempQuestion);
+            console.log(data);
+            var questions = new app.Questions(data);
+            this.model.set('data',questions,{silent:true});
+            this.model.save();
+        },
         initialize : function(){
             //用于存储三种不同类型的题目
             this.selectQuestionType = 'single';
@@ -53,10 +95,12 @@ var app = app || {};
         },
         summitOneQuestion:function(){
             var type = this.selectQuestionType;
-            var serial = $('#serial').val();
-            var title = $('#title').val();
+
             //单项,多选,文本题的处理方式不同
+
             if(this.selectQuestionType != 'text'){
+                var serial = $('#serial').val();
+                var title = $('#title').val();
                 var answer1 = $('#answer1').val();
                 var answer2 = $('#answer2').val();
                 var answer3 = $('#answer3').val();
@@ -69,6 +113,9 @@ var app = app || {};
                     alternativeAnswer:arr
                 };
             }else{
+                var serial = $('#text-serial').val();
+                var title = $('#text-title').val();
+
                 var oneQuestion = {
                     serial:serial,
                     questionTitle:title,
@@ -93,6 +140,7 @@ var app = app || {};
         },
         chooseQuestionType:function(event){
             this.selectQuestionType = event.target.name;
+            console.log(this.selectQuestionType);
             if(this.selectQuestionType != 'text'){
 
                 $('#question-single-multi').css('display','block');
@@ -106,7 +154,7 @@ var app = app || {};
         resetQuestion:function(){
             //将题目列表清空
             $('#questions-list').html('');
-            console.dir(this.model.get('data'));
+//            console.dir(this.model.get('data'));
 
             var questionArr = this.model.get('data');
             if(questionArr.length < 1){
@@ -152,6 +200,15 @@ var app = app || {};
 
                 $('#questions-list').append(view.render().el);
             }
+        },
+        deleteOneQuestion:function(event){
+            var deleteNum = event.target.getAttribute('num');
+            //获取存储题目的数组
+            var data = this.model.get('data');
+            data.splice(deleteNum,1);
+            var questions = new app.Questions(data);
+            this.model.set('data',questions,{silent:true});
+            this.model.save();
         }
 
     });
