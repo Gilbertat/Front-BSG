@@ -7,7 +7,8 @@ var app = app || {};
         defaults: {
             title: '',
             deadline :'',
-            state: 'unpublished'
+            state: '',
+            data:null
         }
     });
 })();

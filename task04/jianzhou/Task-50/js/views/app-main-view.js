@@ -1,6 +1,7 @@
 var app = app || {};
+
 (function($){
-    app.AppView = Backbone.View.extend({
+    app.AppMainView = Backbone.View.extend({
         el: '.main',
         events:{
             'click #new-questionnaire' : 'createOneQuestionnaire'
@@ -14,10 +15,9 @@ var app = app || {};
 //            {reset:true}
             app.questionnaires.fetch();
 
-
         },
+        //测试用函数,完成后无用
         deleteAll:function(questionnaire){
-            console.log();
             questionnaire.destroy();
         },
         addOne : function(questionnaire){
@@ -28,13 +28,24 @@ var app = app || {};
             this.$list.html('');
             app.questionnaires.each(this.addOne,this);
         },
+        //点击"新建问卷"
         createOneQuestionnaire : function(){
-            app.questionnaires.create(this.oneQuesDemo());
+            var questions = new app.Questions;
+            var oneQuestionnaireDemo = {
+                title: '这里修改标题',
+                deadline :'',
+                state: '编辑中',
+                data: questions
+            }
+            app.questionnaires.create(oneQuestionnaireDemo);
+//            this.$el.css("display",'none');
+
         },
+        //这个函数,好像没用了.
         oneQuesDemo:function(){
             return {
-                title: '第一个问卷',
-                deadline :'2016-10-10',
+                title: '这里修改标题',
+                deadline :'',
                 state: '编辑中'
             };
         }

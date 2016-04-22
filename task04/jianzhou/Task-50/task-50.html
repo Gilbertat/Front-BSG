@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
+      xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
-    <title></title>
+    <title>Task-50 微型问卷调查平台</title>
     <link href="node_modules/questionnairemvc-app-css/task50.css" rel="stylesheet" type="text/css">
     <link href="node_modules/questionnairemvc-app-css/poping.css" rel="stylesheet" type="text/css">
 </head>
@@ -29,9 +30,12 @@
                 <tr><th></th><th>标题</th><th>时间</th><th>状态</th><th>操作</th></tr>
             </table>
         </section>
+        <section class="outer-edit-questionnaire">
+
+        </section>
     </section>
 
-<!--每条问卷的模板-->
+<!--问卷列表中每条问卷的模板-->
 <script type="text/template" id="item-template">
 
         <td><input class="toggle" type="checkbox" ></td>
@@ -39,20 +43,90 @@
         <td><label><%- deadline %></label></td>
         <td><label><%- state %></label></td>
         <td>
-            <button class="edit">编辑</button>
-            <button class="destroy">删除</button>
-            <button class="check-data">查看数据</button>
+            <button class="operate-btn edit">编辑</button>
+            <button class="operate-btn destroy">删除</button>
+            <button class="operate-btn check-data">查看数据</button>
         </td>
+
 </script>
+
+<!--每条问卷的模板-->
+<script type="text/template" id="edit-questionnaire-template">
+
+    <input class="questionnaire-title" type="text" value=<%- title %> >
+    <!--题目列表-->
+    <div id="questions-list"></div>
+    <div class="one-line"></div>
+
+    <div class="question-select-type">
+        <button id="single" name="single" autofocus="autofocus">单选题</button>
+        <button id="multi" name="multi">多选题</button>
+        <button id="text" name="text">文本题</button>
+        <button class="summit">提交</button>
+
+        <div id="question-single-multi" class="tabbar" name="single">
+            <label>题目序号<input type="text" name="serial" value="1" id="serial"></label>
+            <label>题目<input type="text" value="你是傻逼吗" id="title"></label><br>
+            <label>A<input type="text" value="Yes" id="answer1"></label>
+            <label>B<input type="text" value="No" id="answer2"></label><br>
+            <label>C<input type="text" value="heihei" id="answer3"></label>
+            <label>D<input type="text" value="hehe" id="answer4"></label>
+        </div>
+        <div id="text-div" class="tabbar" name="text">
+            <label>题目序号<input type="text" name="serial"></label>
+            <label>题目<input type="text" name="serial"></label>
+        </div>
+    </div>
+
+    <button class="add-question">+添加问题</button>
+    <div class="one-line"></div>
+
+    <label>问卷截止日期   <input type="text" id="deadline"></label>
+    <button class="save">保存问卷</button>
+    <button class="release">发布问卷</button>
+
+</script>
+
+    <!--//每个题目的模板-->
+    <script type="text/template" id="single-question-template">
+        <label><%- serial %></label><label>单选题</label>
+        <label><%- questionTitle %></label>
+        <input type="radio" name="answer" ><%- alternativeAnswer[0] %>
+        <input type="radio" name="answer" ><%- alternativeAnswer[1] %>
+        <input type="radio" name="answer" ><%- alternativeAnswer[2] %>
+        <input type="radio" name="answer" ><%- alternativeAnswer[3] %>
+    </script>
+    <!--//每个题目的模板-->
+    <script type="text/template" id="multi-question-template">
+        <label><%- serial %></label><label>多选题</label>
+        <label><%- questionTitle %></label>
+        <input type="checkbox" name="answer" ><%- alternativeAnswer[0] %>
+        <input type="checkbox" name="answer" ><%- alternativeAnswer[1] %>
+        <input type="checkbox" name="answer" ><%- alternativeAnswer[2] %>
+        <input type="checkbox" name="answer" ><%- alternativeAnswer[3] %>
+    </script>
+    <script type="text/template" id="text-question-template">
+        <label><%- serial %></label><label>文本题</label>
+        <label><%- questionTitle %></label>
+        <input type="text" name="answer" >
+    </script>
 <!--<script src="node_modules/questionnairemvc-common/base.js"></script>-->
 <script src="node_modules/jquery/dist/jquery.js"></script>
 <script src="node_modules/underscore/underscore.js"></script>
 <script src="node_modules/backbone/backbone.js"></script>
 <script src="node_modules/backbone.localstorage/backbone.localStorage.js"></script>
+
+<script src="js/models/question.js"></script>
+<script src="js/collections/questions.js"></script>
 <script src="js/models/questionnaire.js"></script>
 <script src="js/collections/questionnaires.js"></script>
+
+<script src="js/views/single-question-view.js"></script>
 <script src="js/views/questionnaire-view.js"></script>
-<script src="js/views/app-view.js"></script>
+<script src="js/views/edit-questionnaire-view.js"></script>
+
+<script src="js/views/app-main-view.js"></script>
+<script src="js/views/app-body-view.js"></script>
 
 <script src="js/app.js"></script>
 
