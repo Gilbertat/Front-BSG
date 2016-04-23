@@ -28,7 +28,7 @@ var app = app || {};
 
         clearConfirm :function(){
             $("#cover").css("display","block");
-            $(".pop-tip").css("display","block");
+            $("#delete-confirm").css("display","block");
             $("body").css("overflow","hidden");
             $('#confirm-btn').attr("cid",this.model.cid);
             //要等待用户反馈,所以删除以下语句

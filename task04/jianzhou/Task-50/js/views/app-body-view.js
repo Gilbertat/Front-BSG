@@ -9,9 +9,11 @@ var app = app || {};
         events:{
             'click .edit': 'changeToEditView',
             'click .save': 'save',
-            'click .release': 'save'
+            'click #release-confirm-btn':'finalRelease',
+            'click #release-cancel-btn':'cancelRelease'
         },
         initialize : function(){
+            app.appMainView = new app.AppMainView();
             this.$main = $('.main');
             this.$outerEditQuestionnaireView = $('.outer-edit-questionnaire');
 
@@ -28,8 +30,11 @@ var app = app || {};
         changeToEditView : function(event){
             var tempQuestionnaire = app.questionnaires.get(event.target.getAttribute('cid'));
             var view = new app.EditQuestionnaireView({model:tempQuestionnaire});
+
             this.$outerEditQuestionnaireView.html(view.render().el);
+
             view.resetQuestion();
+            view.initCalendar();
             this.$main.css("display",'none');
             this.$outerEditQuestionnaireView.css("display","block");
 
@@ -38,9 +43,22 @@ var app = app || {};
         save :function(){
             this.$main.css("display",'block');
             this.$outerEditQuestionnaireView.css("display","none");
+        },
+        finalRelease:function(event){
+            $("#cover").css("display","none");
+            $(".pop-tip").css("display","none");
+            $("body").css("overflow","visible");
+            var tempQuestionnaire = app.questionnaires.get(event.target.getAttribute("cid"));
+            tempQuestionnaire.set('deadline',$('#deadline').val());
+            tempQuestionnaire.set('state','发布中');
+            tempQuestionnaire.save();
+            this.save();
+        },
+        cancelRelease:function(){
+            $("#cover").css("display","none");
+            $(".pop-tip").css("display","none");
+//            $("body").css("overflow","visible");
         }
-
-
     });
 
 })(jQuery);

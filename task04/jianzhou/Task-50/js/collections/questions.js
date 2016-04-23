@@ -12,6 +12,4 @@ var app = app || {};
 
     });
     app.Questions = Questions;
-//    console.dir(Questions);
-//    console.dir(app.Questions);
 })();

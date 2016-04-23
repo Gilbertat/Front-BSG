@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-CN" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
-      xmlns="http://www.w3.org/1999/html">
+      xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Task-50 微型问卷调查平台</title>
@@ -10,11 +10,21 @@
 <body>
     <!--弹框层-->
     <div id="cover"></div>
-    <div class="pop-tip">
-        <div id="inner-title">提示</div>
-        <div id="inner-text"><p>确定删除这项问卷调查吗?</p>
+
+    <div class="pop-tip" id="delete-confirm">
+        <div class="inner-title">提示</div>
+        <div class="inner-text"><p>确定删除这项问卷调查吗?</p>
             <button value="confirm" id="confirm-btn" cid="">确定</button>
             <button value="cancel" id="cancel-btn">取消</button>
+        </div>
+    </div>
+
+    <div class="pop-tip" id="release-confirm">
+        <div class="inner-title">提示</div>
+        <div class="inner-text"><p>确定发布这项问卷调查吗?</p>
+            <p id="release-time"></p>
+            <button value="confirm" id="release-confirm-btn" cid="">确定</button>
+            <button value="cancel" id="release-cancel-btn">取消</button>
         </div>
     </div>
 
@@ -29,16 +39,17 @@
             <table class="questionnaire-list">
                 <tr><th></th><th>标题</th><th>时间</th><th>状态</th><th>操作</th></tr>
             </table>
+            <input type="checkbox" id="delete-all-questionnaire-checkbox">全选</input> <button id="delete-all-questionnaire">全部删除</button>
         </section>
+        <!--编写每个问卷的题目-->
         <section class="outer-edit-questionnaire">
-
         </section>
     </section>
 
 <!--问卷列表中每条问卷的模板-->
 <script type="text/template" id="item-template">
-
-        <td><input class="toggle" type="checkbox" ></td>
+    <!--class="toggle"-->
+        <td><input  type="checkbox" name="questionnaire"></td>
         <td><label><%- title %></label></td>
         <td><label><%- deadline %></label></td>
         <td><label><%- state %></label></td>
@@ -80,41 +91,63 @@
     <button class="add-question">+添加问题</button>
     <div class="one-line"></div>
 
-    <label>问卷截止日期   <input type="text" id="deadline"></label>
+    <label>问卷截止日期   <input type="text" id="deadline" > </label>
+
+    <div id="data-select">
+        <div id="data-select-head">
+            <button id="left">上月</button>
+            <select name="year" id="year">
+            </select>
+            <select name="month" id="month">
+                <option value="0">January</option><option value="1">February</option><option value="2">March</option><option value="3">April</option>
+                <option value="4">May</option><option value="5">June</option><option value="6">July</option><option value="7">August</option>
+                <option value="8">September</option><option value="9">October</option><option value="10">November</option><option value="11">December</option>
+            </select>
+            <button id="right">下月</button>
+        </div>
+        <div id="data-select-body">
+            <table>
+                <thead><tr><th class="weekday">日</th><th>一</th><th>二</th><th>三</th><th>四</th><th>五</th><th class="weekday">六</th></tr></thead>
+                <tbody id="data-list-tbody">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
     <button class="save">保存问卷</button>
     <button class="release">发布问卷</button>
 
 </script>
 
-    <!--//每个题目的模板-->
-    <script type="text/template" id="single-question-template">
-        <span><%- serial %></span><span>(单选题)</span>
-        <span><%- questionTitle %></span><br>
-        <input type="radio" name="answer" ><%- alternativeAnswer[0] %><br>
-        <input type="radio" name="answer" ><%- alternativeAnswer[1] %><br>
-        <input type="radio" name="answer" ><%- alternativeAnswer[2] %><br>
-        <input type="radio" name="answer" ><%- alternativeAnswer[3] %>
-        <button class="up">上移</button><button class="down">下移</button>
-        <button class="delete">删除</button><button class="copy">复制</button>
-    </script>
-    <script type="text/template" id="multi-question-template">
-        <span><%- serial %></span><span>(多选题)</span>
-        <span><%- questionTitle %></span><br>
-        <input type="checkbox" name="answer" ><%- alternativeAnswer[0] %><br>
-        <input type="checkbox" name="answer" ><%- alternativeAnswer[1] %><br>
-        <input type="checkbox" name="answer" ><%- alternativeAnswer[2] %><br>
-        <input type="checkbox" name="answer" ><%- alternativeAnswer[3] %><br>
-        <button class="up">上移</button><button class="down">下移</button>
-        <button class="delete">删除</button><button class="copy">复制</button>
-    </script>
-    <script type="text/template" id="text-question-template">
-        <span><%- serial %></span><span>(文本题)</span>
-        <span><%- questionTitle %></span><br><br>
-        <textarea type="text" name="answer" ></textarea>
-        <button class="up">上移</button><button class="down">下移</button>
-        <button class="delete">删除</button><button class="copy">复制</button>
-    </script>
-<!--<script src="node_modules/questionnairemvc-common/base.js"></script>-->
+<!--//每种不同类型题目的模板-->
+<script type="text/template" id="single-question-template">
+    <span><%- serial %></span><span>(单选题)</span>
+    <span><%- questionTitle %></span><br>
+    <input type="radio" name="answer" ><%- alternativeAnswer[0] %><br>
+    <input type="radio" name="answer" ><%- alternativeAnswer[1] %><br>
+    <input type="radio" name="answer" ><%- alternativeAnswer[2] %><br>
+    <input type="radio" name="answer" ><%- alternativeAnswer[3] %>
+    <button class="up">上移</button><button class="down">下移</button>
+    <button class="delete">删除</button><button class="copy">复制</button>
+</script>
+<script type="text/template" id="multi-question-template">
+    <span><%- serial %></span><span>(多选题)</span>
+    <span><%- questionTitle %></span><br>
+    <input type="checkbox" name="answer" ><%- alternativeAnswer[0] %><br>
+    <input type="checkbox" name="answer" ><%- alternativeAnswer[1] %><br>
+    <input type="checkbox" name="answer" ><%- alternativeAnswer[2] %><br>
+    <input type="checkbox" name="answer" ><%- alternativeAnswer[3] %><br>
+    <button class="up">上移</button><button class="down">下移</button>
+    <button class="delete">删除</button><button class="copy">复制</button>
+</script>
+<script type="text/template" id="text-question-template">
+    <span><%- serial %></span><span>(文本题)</span>
+    <span><%- questionTitle %></span><br><br>
+    <textarea type="text" name="answer" ></textarea>
+    <button class="up">上移</button><button class="down">下移</button>
+    <button class="delete">删除</button><button class="copy">复制</button>
+</script>
+
 <script src="node_modules/jquery/dist/jquery.js"></script>
 <script src="node_modules/underscore/underscore.js"></script>
 <script src="node_modules/backbone/backbone.js"></script>
@@ -129,7 +162,7 @@
 <script src="js/views/questionnaire-view.js"></script>
 <script src="js/views/edit-questionnaire-view.js"></script>
 
-<script src="js/views/app-main-view.js"></script>
+<script src="js/views/app-list-view.js"></script>
 <script src="js/views/app-body-view.js"></script>
 
 <script src="js/app.js"></script>
